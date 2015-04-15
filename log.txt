@@ -1,7 +1,7 @@
-Tue Apr 14 19:32:01 2015
+Tue Apr 14 20:24:42 2015
 Windows-8-6.2.9200
 Ren'Py 6.99.1.329
-AppJam Test 2015 0.0
+ 
 
 
 Windowed mode.
@@ -321,11 +321,6 @@ Texture testing:
 - 512px textures work.
 - 1024px textures work.
 - 2048px textures work.
-Performance test:
-- Target is 5 frames in 0.333333333333 seconds.
-- Frame drawn at 0.000000 seconds.
-- Frame drawn at 0.047000 seconds.
-- Frame drawn at 0.047000 seconds.
-- Frame drawn at 0.047000 seconds.
-- Frame drawn at 0.062000 seconds.
-- 0.062000 seconds to render 5 frames.
+
+Windowed mode.
+Screen sizes: virtual=(800, 600) physical=(1818, 978)
