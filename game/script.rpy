@@ -13,7 +13,7 @@ init:
     image bg_basketball = im.Scale('images/basketball.PNG', width = 800, height= 450, yalign=0.0)
     image ball_rack = Image('images/BannedStory_image.PNG', ypos=450, xpos=600)
     image snowing = SnowBlossom('images/snow.PNG', count = 50)
-    
+     
     image char1:
         xalign .25 yalign .7
         "images/char1_shooting/shoot1_0.PNG"
