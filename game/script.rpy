@@ -7,6 +7,8 @@
 define narrator = Character('Narrator', color="#c8ffc8")
 define pov = Character("[povname]")
 
+#NOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+
 init:
     image bg_basketball = im.Scale('images/basketball.PNG', width = 800, height= 450, yalign=0.0)
     image ball_rack = Image('images/BannedStory_image.PNG', ypos=450, xpos=600)
