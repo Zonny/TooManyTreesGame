@@ -29,11 +29,24 @@ init:
 
 # The game starts here.
 label start:
+    image walk_animation = Animation("images/walk1_0.PNG",.25,
+                                     "images/walk1_1.PNG", .25,
+                                     "images/walk1_2.PNG", .25,
+                                     "images/walk1_3.PNG", .25,
+                                     "images/walk2_0.PNG", .25,
+                                     "images/walk2_1.PNG", .25,
+                                     "images/walk2_2.PNG", .25,
+                                     "images/walk2_3.PNG", .25)
+
     scene bg_basketball
     show snowing
     show char1
         
     narrator "Welcome to the 2015 annual autism app jam competition."
+    show walk_animation:
+        xalign 1.0 yalign .70
+        linear 10.0 xalign 0.0
+    
     show ball_rack:
         xalign 1.0 yalign .70
         linear 5.0 xalign 0.0
