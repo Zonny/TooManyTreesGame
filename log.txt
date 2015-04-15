@@ -315,4 +315,17 @@ Using copy RTT.
 Using gl renderer.
 Texture testing:
 - Hardware max texture size: 16384
-- 64px textu
+- 64px textures work.
+- 128px textures work.
+- 256px textures work.
+- 512px textures work.
+- 1024px textures work.
+- 2048px textures work.
+Performance test:
+- Target is 5 frames in 0.333333333333 seconds.
+- Frame drawn at 0.000000 seconds.
+- Frame drawn at 0.047000 seconds.
+- Frame drawn at 0.047000 seconds.
+- Frame drawn at 0.047000 seconds.
+- Frame drawn at 0.062000 seconds.
+- 0.062000 seconds to render 5 frames.
