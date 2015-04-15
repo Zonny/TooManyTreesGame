@@ -1,7 +1,7 @@
 .android.json matches .android.json ([u'android']).
+.git/ matches .* (None).
 errors.txt matches errors.txt (None).
 game/ matches ** ([u'all']).
-game/basketball.PNG matches ** ([u'all']).
 game/bytecode.rpyb matches ** ([u'all']).
 game/images/ matches ** ([u'all']).
 game/images/BannedStory_image.png matches ** ([u'all']).
@@ -22,7 +22,7 @@ images/basketball.PNG matches ** ([u'all']).
 images/Thumbs.db matches ** ([u'all']).
 log.txt matches log.txt (None).
 README.html matches ** ([u'all']).
-Thumbs.db matches ** ([u'all']).
+README.md matches ** ([u'all']).
 tmp/ matches tmp/ (None).
 traceback.txt matches traceback.txt (None).
 doc/ doesn't match anything.

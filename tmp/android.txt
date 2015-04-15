@@ -6,7 +6,9 @@ Resolved location of library project to: C:\Users\Alvin\Downloads\renpy-6.99.1-s
 Updated and renamed default.properties to project.properties
 Updated local.properties
 Added file C:\Users\Alvin\Downloads\renpy-6.99.1-sdk\rapt\build.xml
-Added file C:\Users\Alvin\Downloads\renpy-6.99.1-sdk\rapt\proguard-project.txt
+Updated file C:\Users\Alvin\Downloads\renpy-6.99.1-sdk\rapt\proguard-project.txt
+It seems that there are sub-projects. If you want to update them
+please use the --subprojects parameter.
 
 
 
@@ -43,13 +45,6 @@ Buildfile: C:\Users\Alvin\Downloads\renpy-6.99.1-sdk\rapt\build.xml
 [gettarget] API level:        19
      [echo] ----------
      [echo] Creating output directories if needed...
-    [mkdir] Created dir: C:\Users\Alvin\Downloads\renpy-6.99.1-sdk\rapt\bin
-    [mkdir] Created dir: C:\Users\Alvin\Downloads\renpy-6.99.1-sdk\rapt\bin\res
-    [mkdir] Created dir: C:\Users\Alvin\Downloads\renpy-6.99.1-sdk\rapt\bin\rsObj
-    [mkdir] Created dir: C:\Users\Alvin\Downloads\renpy-6.99.1-sdk\rapt\bin\rsLibs
-    [mkdir] Created dir: C:\Users\Alvin\Downloads\renpy-6.99.1-sdk\rapt\gen
-    [mkdir] Created dir: C:\Users\Alvin\Downloads\renpy-6.99.1-sdk\rapt\bin\classes
-    [mkdir] Created dir: C:\Users\Alvin\Downloads\renpy-6.99.1-sdk\rapt\bin\dexedLibs
      [echo] ----------
      [echo] Resolving Dependencies for BallRackBack041415-0.1...
 [dependency] Library dependencies:
@@ -88,14 +83,6 @@ nodeps:
 [gettarget] API level:        19
      [echo] ----------
      [echo] Creating output directories if needed...
-    [mkdir] Created dir: C:\Users\Alvin\Downloads\renpy-6.99.1-sdk\rapt\android-sdk-r23\extras\google\play_licensing\library\libs
-    [mkdir] Created dir: C:\Users\Alvin\Downloads\renpy-6.99.1-sdk\rapt\android-sdk-r23\extras\google\play_licensing\library\bin
-    [mkdir] Created dir: C:\Users\Alvin\Downloads\renpy-6.99.1-sdk\rapt\android-sdk-r23\extras\google\play_licensing\library\bin\res
-    [mkdir] Created dir: C:\Users\Alvin\Downloads\renpy-6.99.1-sdk\rapt\android-sdk-r23\extras\google\play_licensing\library\bin\rsObj
-    [mkdir] Created dir: C:\Users\Alvin\Downloads\renpy-6.99.1-sdk\rapt\android-sdk-r23\extras\google\play_licensing\library\bin\rsLibs
-    [mkdir] Created dir: C:\Users\Alvin\Downloads\renpy-6.99.1-sdk\rapt\android-sdk-r23\extras\google\play_licensing\library\gen
-    [mkdir] Created dir: C:\Users\Alvin\Downloads\renpy-6.99.1-sdk\rapt\android-sdk-r23\extras\google\play_licensing\library\bin\classes
-    [mkdir] Created dir: C:\Users\Alvin\Downloads\renpy-6.99.1-sdk\rapt\android-sdk-r23\extras\google\play_licensing\library\bin\dexedLibs
      [echo] ----------
      [echo] Resolving Dependencies for library...
 [dependency] Library dependencies:
@@ -104,6 +91,7 @@ nodeps:
 [dependency] ------------------
 
 -code-gen:
+[mergemanifest] Found Deleted Target File
 [mergemanifest] Merging AndroidManifest files into one.
 [mergemanifest] Manifest merger disabled. Using project manifest only.
      [echo] Handling aidl files...
@@ -112,23 +100,16 @@ nodeps:
      [echo] Handling RenderScript files...
      [echo] ----------
      [echo] Handling Resources...
+     [aapt] Found new input file
      [aapt] Generating resource IDs...
      [echo] ----------
      [echo] Handling BuildConfig class...
-[buildconfig] Generating BuildConfig class.
+[buildconfig] No need to generate new BuildConfig.
 
 -pre-compile:
 
 -compile:
-    [javac] Compiling 19 source files to C:\Users\Alvin\Downloads\renpy-6.99.1-sdk\rapt\android-sdk-r23\extras\google\play_licensing\library\bin\classes
-    [javac] warning: [options] source value 1.5 is obsolete and will be removed in a future release
-    [javac] warning: [options] target value 1.5 is obsolete and will be removed in a future release
-    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
-    [javac] Note: C:\Users\Alvin\Downloads\renpy-6.99.1-sdk\rapt\android-sdk-r23\extras\google\play_licensing\library\src\com\google\android\vending\licensing\LicenseChecker.java uses or overrides a deprecated API.
-    [javac] Note: Recompile with -Xlint:deprecation for details.
-    [javac] 3 warnings
      [echo] Creating library output jar file...
-      [jar] Building jar: C:\Users\Alvin\Downloads\renpy-6.99.1-sdk\rapt\android-sdk-r23\extras\google\play_licensing\library\bin\classes.jar
 
 -post-compile:
 
@@ -154,7 +135,7 @@ nodeps:
 
 -release-nosign:
      [echo] 
-[propertyfile] Creating new property file: C:\Users\Alvin\Downloads\renpy-6.99.1-sdk\rapt\android-sdk-r23\extras\google\play_licensing\library\bin\build.prop
+[propertyfile] Updating property file: C:\Users\Alvin\Downloads\renpy-6.99.1-sdk\rapt\android-sdk-r23\extras\google\play_licensing\library\bin\build.prop
 [propertyfile] Updating property file: C:\Users\Alvin\Downloads\renpy-6.99.1-sdk\rapt\android-sdk-r23\extras\google\play_licensing\library\bin\build.prop
 [propertyfile] Updating property file: C:\Users\Alvin\Downloads\renpy-6.99.1-sdk\rapt\android-sdk-r23\extras\google\play_licensing\library\bin\build.prop
 [propertyfile] Updating property file: C:\Users\Alvin\Downloads\renpy-6.99.1-sdk\rapt\android-sdk-r23\extras\google\play_licensing\library\bin\build.prop
@@ -192,14 +173,6 @@ nodeps:
 [gettarget] API level:        19
      [echo] ----------
      [echo] Creating output directories if needed...
-    [mkdir] Created dir: C:\Users\Alvin\Downloads\renpy-6.99.1-sdk\rapt\android-sdk-r23\extras\google\play_apk_expansion\downloader_library\libs
-    [mkdir] Created dir: C:\Users\Alvin\Downloads\renpy-6.99.1-sdk\rapt\android-sdk-r23\extras\google\play_apk_expansion\downloader_library\bin
-    [mkdir] Created dir: C:\Users\Alvin\Downloads\renpy-6.99.1-sdk\rapt\android-sdk-r23\extras\google\play_apk_expansion\downloader_library\bin\res
-    [mkdir] Created dir: C:\Users\Alvin\Downloads\renpy-6.99.1-sdk\rapt\android-sdk-r23\extras\google\play_apk_expansion\downloader_library\bin\rsObj
-    [mkdir] Created dir: C:\Users\Alvin\Downloads\renpy-6.99.1-sdk\rapt\android-sdk-r23\extras\google\play_apk_expansion\downloader_library\bin\rsLibs
-    [mkdir] Created dir: C:\Users\Alvin\Downloads\renpy-6.99.1-sdk\rapt\android-sdk-r23\extras\google\play_apk_expansion\downloader_library\gen
-    [mkdir] Created dir: C:\Users\Alvin\Downloads\renpy-6.99.1-sdk\rapt\android-sdk-r23\extras\google\play_apk_expansion\downloader_library\bin\classes
-    [mkdir] Created dir: C:\Users\Alvin\Downloads\renpy-6.99.1-sdk\rapt\android-sdk-r23\extras\google\play_apk_expansion\downloader_library\bin\dexedLibs
      [echo] ----------
      [echo] Resolving Dependencies for downloader_library...
 [dependency] Library dependencies:
@@ -210,6 +183,7 @@ nodeps:
 [dependency] ------------------
 
 -code-gen:
+[mergemanifest] Found Deleted Target File
 [mergemanifest] Merging AndroidManifest files into one.
 [mergemanifest] Manifest merger disabled. Using project manifest only.
      [echo] Handling aidl files...
@@ -218,23 +192,21 @@ nodeps:
      [echo] Handling RenderScript files...
      [echo] ----------
      [echo] Handling Resources...
+     [aapt] Found Deleted Target File
      [aapt] Generating resource IDs...
      [echo] ----------
      [echo] Handling BuildConfig class...
-[buildconfig] Generating BuildConfig class.
+[buildconfig] No need to generate new BuildConfig.
 
 -pre-compile:
 
 -compile:
-    [javac] Compiling 22 source files to C:\Users\Alvin\Downloads\renpy-6.99.1-sdk\rapt\android-sdk-r23\extras\google\play_apk_expansion\downloader_library\bin\classes
+    [javac] Compiling 1 source file to C:\Users\Alvin\Downloads\renpy-6.99.1-sdk\rapt\android-sdk-r23\extras\google\play_apk_expansion\downloader_library\bin\classes
     [javac] warning: [options] source value 1.5 is obsolete and will be removed in a future release
     [javac] warning: [options] target value 1.5 is obsolete and will be removed in a future release
     [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
-    [javac] Note: Some input files use or override a deprecated API.
-    [javac] Note: Recompile with -Xlint:deprecation for details.
     [javac] 3 warnings
      [echo] Creating library output jar file...
-      [jar] Building jar: C:\Users\Alvin\Downloads\renpy-6.99.1-sdk\rapt\android-sdk-r23\extras\google\play_apk_expansion\downloader_library\bin\classes.jar
 
 -post-compile:
 
@@ -246,11 +218,7 @@ nodeps:
 -crunch:
    [crunch] Crunching PNG Files in source dir: C:\Users\Alvin\Downloads\renpy-6.99.1-sdk\rapt\android-sdk-r23\extras\google\play_apk_expansion\downloader_library\res
    [crunch] To destination dir: C:\Users\Alvin\Downloads\renpy-6.99.1-sdk\rapt\android-sdk-r23\extras\google\play_apk_expansion\downloader_library\bin\res
-   [crunch] Processing image to cache: C:\Users\Alvin\Downloads\renpy-6.99.1-sdk\rapt\android-sdk-r23\extras\google\play_apk_expansion\downloader_library\res\drawable-hdpi\notify_panel_notification_icon_bg.png => C:\Users\Alvin\Downloads\renpy-6.99.1-sdk\rapt\android-sdk-r23\extras\google\play_apk_expansion\downloader_library\bin\res\drawable-hdpi\notify_panel_notification_icon_bg.png
-   [crunch]   (processed image to cache entry C:\Users\Alvin\Downloads\renpy-6.99.1-sdk\rapt\android-sdk-r23\extras\google\play_apk_expansion\downloader_library\bin\res\drawable-hdpi\notify_panel_notification_icon_bg.png: 0% size of source)
-   [crunch] Processing image to cache: C:\Users\Alvin\Downloads\renpy-6.99.1-sdk\rapt\android-sdk-r23\extras\google\play_apk_expansion\downloader_library\res\drawable-mdpi\notify_panel_notification_icon_bg.png => C:\Users\Alvin\Downloads\renpy-6.99.1-sdk\rapt\android-sdk-r23\extras\google\play_apk_expansion\downloader_library\bin\res\drawable-mdpi\notify_panel_notification_icon_bg.png
-   [crunch]   (processed image to cache entry C:\Users\Alvin\Downloads\renpy-6.99.1-sdk\rapt\android-sdk-r23\extras\google\play_apk_expansion\downloader_library\bin\res\drawable-mdpi\notify_panel_notification_icon_bg.png: 0% size of source)
-   [crunch] Crunched 2 PNG files to update cache
+   [crunch] Crunched 0 PNG files to update cache
 
 -package-resources:
      [echo] Library project: do not package resources...
@@ -264,7 +232,7 @@ nodeps:
 
 -release-nosign:
      [echo] 
-[propertyfile] Creating new property file: C:\Users\Alvin\Downloads\renpy-6.99.1-sdk\rapt\android-sdk-r23\extras\google\play_apk_expansion\downloader_library\bin\build.prop
+[propertyfile] Updating property file: C:\Users\Alvin\Downloads\renpy-6.99.1-sdk\rapt\android-sdk-r23\extras\google\play_apk_expansion\downloader_library\bin\build.prop
 [propertyfile] Updating property file: C:\Users\Alvin\Downloads\renpy-6.99.1-sdk\rapt\android-sdk-r23\extras\google\play_apk_expansion\downloader_library\bin\build.prop
 [propertyfile] Updating property file: C:\Users\Alvin\Downloads\renpy-6.99.1-sdk\rapt\android-sdk-r23\extras\google\play_apk_expansion\downloader_library\bin\build.prop
 [propertyfile] Updating property file: C:\Users\Alvin\Downloads\renpy-6.99.1-sdk\rapt\android-sdk-r23\extras\google\play_apk_expansion\downloader_library\bin\build.prop
@@ -276,6 +244,7 @@ nodeps:
 release:
 
 -code-gen:
+[mergemanifest] Found Deleted Target File
 [mergemanifest] Merging AndroidManifest files into one.
 [mergemanifest] Manifest merger disabled. Using project manifest only.
      [echo] Handling aidl files...
@@ -285,20 +254,19 @@ release:
      [echo] Handling RenderScript files...
      [echo] ----------
      [echo] Handling Resources...
+     [aapt] Found Deleted Target File
      [aapt] Generating resource IDs...
      [echo] ----------
      [echo] Handling BuildConfig class...
-[buildconfig] Generating BuildConfig class.
+[buildconfig] No need to generate new BuildConfig.
 
 -pre-compile:
 
 -compile:
-    [javac] Compiling 28 source files to C:\Users\Alvin\Downloads\renpy-6.99.1-sdk\rapt\bin\classes
+    [javac] Compiling 5 source files to C:\Users\Alvin\Downloads\renpy-6.99.1-sdk\rapt\bin\classes
     [javac] warning: [options] source value 1.5 is obsolete and will be removed in a future release
     [javac] warning: [options] target value 1.5 is obsolete and will be removed in a future release
     [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
-    [javac] Note: Some input files use or override a deprecated API.
-    [javac] Note: Recompile with -Xlint:deprecation for details.
     [javac] 3 warnings
 
 -post-compile:
@@ -311,10 +279,11 @@ release:
       [dex] input: C:\Users\Alvin\Downloads\renpy-6.99.1-sdk\rapt\android-sdk-r23\extras\google\play_licensing\library\bin\classes.jar
       [dex] input: C:\Users\Alvin\Downloads\renpy-6.99.1-sdk\rapt\libs\amazon-iap-2.0.1.jar
       [dex] input: C:\Users\Alvin\Downloads\renpy-6.99.1-sdk\rapt\libs\ouya-sdk.jar
-      [dex] Pre-Dexing C:\Users\Alvin\Downloads\renpy-6.99.1-sdk\rapt\android-sdk-r23\extras\google\play_apk_expansion\downloader_library\bin\classes.jar -> classes-dc3a62ddb04becc50e4f756179b6e3cf.jar
-      [dex] Pre-Dexing C:\Users\Alvin\Downloads\renpy-6.99.1-sdk\rapt\android-sdk-r23\extras\google\play_licensing\library\bin\classes.jar -> classes-9c4af853a3801dc03b76b3f03884892b.jar
-      [dex] Pre-Dexing C:\Users\Alvin\Downloads\renpy-6.99.1-sdk\rapt\libs\amazon-iap-2.0.1.jar -> amazon-iap-2.0.1-55e5aa5bc7d4339b99488201b89dfac0.jar
-      [dex] Pre-Dexing C:\Users\Alvin\Downloads\renpy-6.99.1-sdk\rapt\libs\ouya-sdk.jar -> ouya-sdk-33c04d89c4b3158fb923bd8a338a6992.jar
+      [dex] Using Pre-Dexed classes-dc3a62ddb04becc50e4f756179b6e3cf.jar <- C:\Users\Alvin\Downloads\renpy-6.99.1-sdk\rapt\android-sdk-r23\extras\google\play_apk_expansion\downloader_library\bin\classes.jar
+      [dex] Using Pre-Dexed classes-9c4af853a3801dc03b76b3f03884892b.jar <- C:\Users\Alvin\Downloads\renpy-6.99.1-sdk\rapt\android-sdk-r23\extras\google\play_licensing\library\bin\classes.jar
+      [dex] Using Pre-Dexed amazon-iap-2.0.1-55e5aa5bc7d4339b99488201b89dfac0.jar <- C:\Users\Alvin\Downloads\renpy-6.99.1-sdk\rapt\libs\amazon-iap-2.0.1.jar
+      [dex] Using Pre-Dexed ouya-sdk-33c04d89c4b3158fb923bd8a338a6992.jar <- C:\Users\Alvin\Downloads\renpy-6.99.1-sdk\rapt\libs\ouya-sdk.jar
+      [dex] Found Deleted Target File
       [dex] Converting compiled files and external libraries into C:\Users\Alvin\Downloads\renpy-6.99.1-sdk\rapt\bin\classes.dex...
        [dx] Merged dex A (63 defs/79.8KiB) with dex B (47 defs/88.1KiB). Result is 110 defs/197.1KiB. Took 0.1s
        [dx] Merged dex A (110 defs/197.1KiB) with dex B (25 defs/35.5KiB). Result is 135 defs/283.1KiB. Took 0.0s
@@ -324,17 +293,16 @@ release:
 -crunch:
    [crunch] Crunching PNG Files in source dir: C:\Users\Alvin\Downloads\renpy-6.99.1-sdk\rapt\res
    [crunch] To destination dir: C:\Users\Alvin\Downloads\renpy-6.99.1-sdk\rapt\bin\res
-   [crunch] Processing image to cache: C:\Users\Alvin\Downloads\renpy-6.99.1-sdk\rapt\res\drawable-hdpi\ic_launcher.png => C:\Users\Alvin\Downloads\renpy-6.99.1-sdk\rapt\bin\res\drawable-hdpi\ic_launcher.png
-   [crunch]   (processed image to cache entry C:\Users\Alvin\Downloads\renpy-6.99.1-sdk\rapt\bin\res\drawable-hdpi\ic_launcher.png: 0% size of source)
    [crunch] Processing image to cache: C:\Users\Alvin\Downloads\renpy-6.99.1-sdk\rapt\res\drawable\icon.png => C:\Users\Alvin\Downloads\renpy-6.99.1-sdk\rapt\bin\res\drawable\icon.png
    [crunch]   (processed image to cache entry C:\Users\Alvin\Downloads\renpy-6.99.1-sdk\rapt\bin\res\drawable\icon.png: 96% size of source)
-   [crunch] Crunched 2 PNG files to update cache
+   [crunch] Crunched 1 PNG files to update cache
 
 -package-resources:
+     [aapt] Found Deleted Target File
      [aapt] Creating full resource package...
 
 -package:
-[apkbuilder] Current build type is different than previous build: forced apkbuilder run.
+[apkbuilder] Found Deleted Target File
 [apkbuilder] Creating BallRackBack041415-0.1-release-unsigned.apk for release...
 
 -post-package:
@@ -347,7 +315,7 @@ release:
      [echo] Signing final apk...
  [zipalign] Running zip align on final apk...
      [echo] Release Package: C:\Users\Alvin\Downloads\renpy-6.99.1-sdk\rapt\bin\BallRackBack041415-0.1-release.apk
-[propertyfile] Creating new property file: C:\Users\Alvin\Downloads\renpy-6.99.1-sdk\rapt\bin\build.prop
+[propertyfile] Updating property file: C:\Users\Alvin\Downloads\renpy-6.99.1-sdk\rapt\bin\build.prop
 [propertyfile] Updating property file: C:\Users\Alvin\Downloads\renpy-6.99.1-sdk\rapt\bin\build.prop
 [propertyfile] Updating property file: C:\Users\Alvin\Downloads\renpy-6.99.1-sdk\rapt\bin\build.prop
 [propertyfile] Updating property file: C:\Users\Alvin\Downloads\renpy-6.99.1-sdk\rapt\bin\build.prop
@@ -356,5 +324,10 @@ release:
 
 release:
 
-install:
-     [echo] Installing C:\Users\Alvin\Downloads\renpy-6.99.1-sdk\rapt\bin\BallRackBack041415-0.1-release.apk onto default emulator or device...
+BUILD SUCCESSFUL
+Total time: 9 seconds
+
+
+
+
+The build seems to have succeeded.
