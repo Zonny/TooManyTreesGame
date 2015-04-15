@@ -5,6 +5,7 @@
 
 # Declare characters used by this game.
 define narrator = Character('Narrator', color="#c8ffc8")
+define pov = Character("[povname]")
 
 init:
     image bg_basketball = im.Scale('images/basketball.PNG', width = 800, height= 450, yalign=0.0)
@@ -19,16 +20,26 @@ label start:
     narrator "Welcome to the 2015 annual autism app jam competition."
     show ball_rack:
         xalign 1.0 yalign .70
-        
         linear 5.0 xalign 0.0
+    pause 5.0
 
     narrator "The boss to beat is Ayrton AKA Altron."
     
     show ball_rack:
         xalign 0.0 yalign .70
+
         linear 2.5 xalign 1.0
+    
+    pause 2.5
+    python:
+        
+        povname = renpy.input("Hello Nerd. We need your name: ")
 
     narrator "Ball Rack BACK"
+    
+    pov "Hi. I am ready to jam. Ball Rack"
+    
+    narrator "Cool. I'll meet you behind 7-11."
     return
 
 # Alvin's Comment
