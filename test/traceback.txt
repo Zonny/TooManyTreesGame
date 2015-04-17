@@ -1,0 +1,25 @@
+﻿I'm sorry, but an uncaught exception occurred.
+
+While running game code:
+  File "game/script.rpy", line 29, in script
+    python:
+  File "game/script.rpy", line 29, in <module>
+    python:
+NameError: name 'name' is not defined
+
+-- Full Traceback ------------------------------------------------------------
+
+Full traceback:
+  File "game/script.rpy", line 29, in script
+    python:
+  File "C:\Users\Karen\renpy-6.99.1-sdk\renpy\ast.py", line 1723, in execute
+    value = renpy.python.py_eval_bytecode(self.code.bytecode)
+  File "C:\Users\Karen\renpy-6.99.1-sdk\renpy\python.py", line 1456, in py_eval_bytecode
+    return eval(bytecode, globals, locals)
+  File "game/script.rpy", line 29, in <module>
+    python:
+NameError: name 'name' is not defined
+
+Windows-7-6.1.7601-SP1
+Ren'Py 6.99.1.329
+test 0.0
