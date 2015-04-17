@@ -94,23 +94,20 @@ init:
     
     #Returns a list of string names in a directory with path+nameoffile
     python:
-       main_standing = dir_filenames('images/characters/main_standing/')
+       player_stand = dir_filenames('images/characters/player_standing/')
         
     image main_char_stand:
         xalign .5 yalign .27
 
-        'images/characters/main_standing/alert_0.png'
-        #main_standing[0]
+        player_stand[0]
         pause .5
-        'images/characters/main_standing/alert_1.png'
-        #main_standin[1]
+        player_stand[1]
         pause .5
-        'images/characters/main_standing/alert_2.png'
-        #etc
+        player_stand[2]
         pause .5
-        'images/characters/main_standing/alert_3.png'
+        player_stand[3]
         pause .5
-        'images/characters/main_standing/alert_4.png'
+        player_stand[4]
 
         repeat
         
