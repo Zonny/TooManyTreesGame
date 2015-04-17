@@ -80,8 +80,6 @@ init python:
         result = []
         for filename in os.listdir(game_path + '/' + path):
             result.append(path + '/' + filename)
-        
-        print result
             
         return result
         
@@ -95,8 +93,16 @@ init:
     #Returns a list of string names in a directory with path+nameoffile
     python:
        player_stand = dir_filenames('images/characters/player_standing/')
+       player_jump = dir_filenames('images/characters/player_jumping/')
+       estella_stand = dir_filenames('images/characters/estella_standing/')
+       estella_jump = dir_filenames('images/characters/estella_jumping/')
+       lance_stand = dir_filenames('images/characters/lance_standing/')
+       lance_jump = dir_filenames('images/characters/lance_jumping/')
+       hiruka_stand = dir_filenames('images/characters/hiruka_standing/')
+       hiruka_jump = dir_filenames('images/characters/hiruka_jumping/')
+       
         
-    image main_char_stand:
+    image player_char_stand:
         xalign .5 yalign .27
 
         player_stand[0]
@@ -111,7 +117,7 @@ init:
 
         repeat
         
-    image friend_1_stand:
+    image oneal_stand:
         xalign .20 yalign .45
         
         'images/characters/blue_standing/alert_0.png'
@@ -128,7 +134,7 @@ init:
         'images/characters/blue_standing/alert_4.png'
         repeat
         
-    image friend_2_stand:
+    image estella_stand:
         xalign .35 yalign .45
         
         'images/characters/browcut_standing/alert_0.png'
