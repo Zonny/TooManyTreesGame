@@ -1,24 +1,76 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
-While running game code:
-  File "game/script.rpy", line 30, in script
-    python:
-  File "game/script.rpy", line 31, in <module>
-    for i in char1_shooting:
-TypeError: 'SpriteManager' object is not iterable
+Executing ATL code at game/script.rpy:103
+  File "game/script.rpy", line 108, in script call
+    return
+  File "game/script.rpy", line 117, in script
+    
+Exception: ATL appears to be in an infinite loop.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 30, in script
-    python:
-  File "C:\Users\Alvin\Downloads\renpy-6.99.1-sdk\renpy\ast.py", line 785, in execute
-    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
-  File "C:\Users\Alvin\Downloads\renpy-6.99.1-sdk\renpy\python.py", line 1432, in py_exec_bytecode
-    exec bytecode in globals, locals
-  File "game/script.rpy", line 31, in <module>
-    for i in char1_shooting:
-TypeError: 'SpriteManager' object is not iterable
+  File "game/script.rpy", line 108, in script call
+    return
+  File "game/script.rpy", line 117, in script
+    
+  File "C:\Users\Alvin\Downloads\renpy-6.99.1-sdk\renpy\ast.py", line 593, in execute
+    renpy.exports.say(who, what, interact=self.interact)
+  File "C:\Users\Alvin\Downloads\renpy-6.99.1-sdk\renpy\exports.py", line 1033, in say
+    who(what, interact=interact)
+  File "C:\Users\Alvin\Downloads\renpy-6.99.1-sdk\renpy\character.py", line 826, in __call__
+    self.do_display(who, what, cb_args=self.cb_args, **display_args)
+  File "C:\Users\Alvin\Downloads\renpy-6.99.1-sdk\renpy\character.py", line 688, in do_display
+    **display_args)
+  File "C:\Users\Alvin\Downloads\renpy-6.99.1-sdk\renpy\character.py", line 491, in display_say
+    rv = renpy.ui.interact(mouse='say', type=type, roll_forward=roll_forward)
+  File "C:\Users\Alvin\Downloads\renpy-6.99.1-sdk\renpy\ui.py", line 247, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "C:\Users\Alvin\Downloads\renpy-6.99.1-sdk\renpy\display\core.py", line 2243, in interact
+    repeat, rv = self.interact_core(preloads=preloads, **kwargs)
+  File "C:\Users\Alvin\Downloads\renpy-6.99.1-sdk\renpy\display\core.py", line 2572, in interact_core
+    self.draw_screen(root_widget, fullscreen_video, (not fullscreen_video) or video_frame_drawn)
+  File "C:\Users\Alvin\Downloads\renpy-6.99.1-sdk\renpy\display\core.py", line 1694, in draw_screen
+    renpy.config.screen_height,
+  File "renpy/display/render.pyx", line 364, in renpy.display.render.render_screen (gen\renpy.display.render.c:5734)
+    rv = render(root, width, height, 0, 0)
+  File "renpy/display/render.pyx", line 175, in renpy.display.render.render (gen\renpy.display.render.c:2600)
+    rv = d.render(widtho, heighto, st, at)
+  File "C:\Users\Alvin\Downloads\renpy-6.99.1-sdk\renpy\display\layout.py", line 629, in render
+    surf = render(child, width, height, cst, cat)
+  File "renpy/display/render.pyx", line 99, in renpy.display.render.render (gen\renpy.display.render.c:2921)
+    cpdef render(d, object widtho, object heighto, double st, double at):
+  File "renpy/display/render.pyx", line 175, in renpy.display.render.render (gen\renpy.display.render.c:2600)
+    rv = d.render(widtho, heighto, st, at)
+  File "C:\Users\Alvin\Downloads\renpy-6.99.1-sdk\renpy\display\layout.py", line 629, in render
+    surf = render(child, width, height, cst, cat)
+  File "renpy/display/render.pyx", line 99, in renpy.display.render.render (gen\renpy.display.render.c:2921)
+    cpdef render(d, object widtho, object heighto, double st, double at):
+  File "renpy/display/render.pyx", line 175, in renpy.display.render.render (gen\renpy.display.render.c:2600)
+    rv = d.render(widtho, heighto, st, at)
+  File "C:\Users\Alvin\Downloads\renpy-6.99.1-sdk\renpy\display\layout.py", line 629, in render
+    surf = render(child, width, height, cst, cat)
+  File "renpy/display/render.pyx", line 99, in renpy.display.render.render (gen\renpy.display.render.c:2921)
+    cpdef render(d, object widtho, object heighto, double st, double at):
+  File "renpy/display/render.pyx", line 175, in renpy.display.render.render (gen\renpy.display.render.c:2600)
+    rv = d.render(widtho, heighto, st, at)
+  File "C:\Users\Alvin\Downloads\renpy-6.99.1-sdk\renpy\display\image.py", line 210, in render
+    return wrap_render(self.target, width, height, st, at)
+  File "C:\Users\Alvin\Downloads\renpy-6.99.1-sdk\renpy\display\image.py", line 82, in wrap_render
+    rend = render(child, w, h, st, at)
+  File "renpy/display/render.pyx", line 99, in renpy.display.render.render (gen\renpy.display.render.c:2921)
+    cpdef render(d, object widtho, object heighto, double st, double at):
+  File "renpy/display/render.pyx", line 175, in renpy.display.render.render (gen\renpy.display.render.c:2600)
+    rv = d.render(widtho, heighto, st, at)
+  File "renpy/display/accelerator.pyx", line 91, in renpy.display.accelerator.transform_render (gen\renpy.display.accelerator.c:1723)
+    self.update_state()
+  File "C:\Users\Alvin\Downloads\renpy-6.99.1-sdk\renpy\display\motion.py", line 773, in update_state
+    fr = self.function(self, self.st, self.at)
+  File "C:\Users\Alvin\Downloads\renpy-6.99.1-sdk\renpy\atl.py", line 498, in execute
+    action, arg, pause = block.execute(trans, timebase, self.atl_state, event)
+  File "C:\Users\Alvin\Downloads\renpy-6.99.1-sdk\renpy\atl.py", line 714, in execute
+    raise Exception("ATL appears to be in an infinite loop.")
+Exception: ATL appears to be in an infinite loop.
 
 Windows-8-6.2.9200
 Ren'Py 6.99.1.329

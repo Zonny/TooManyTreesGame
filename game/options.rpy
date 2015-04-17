@@ -109,7 +109,7 @@ init -1 python hide:
     ## Padding is space inside the window, where the background is
     ## drawn.
 
-    # style.window.left_padding = 6
+    style.window.left_padding = 150
     # style.window.right_padding = 6
     # style.window.top_padding = 6
     # style.window.bottom_padding = 6

@@ -2,13 +2,8 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 30: expected statement.
-<<<<<<< HEAD
-    pyhton:
-          ^
-=======
-    for num in range(0, 401):
-                    ^
->>>>>>> f1dd67128054ddfaeee8bff72d66e7d22ed2ef89
+File "game/script.rpy", line 102: Line is indented, but the preceding ATL statement does not expect a block. Please check this line's indentation.
+    for frame in result:
+    ^
 
 Ren'Py Version: Ren'Py 6.99.1.329
