@@ -100,6 +100,9 @@ init:
        lance_jump = dir_filenames('images/characters/lance_jumping/')
        hiruka_stand = dir_filenames('images/characters/hiruka_standing/')
        hiruka_jump = dir_filenames('images/characters/hiruka_jumping/')
+       oneal_stand = dir_filenames('images/characters/oneal_standing/')
+       oneal_jump = dir_filenames('images/characters/oneal_standing/')
+       
        
         
     image player_char_stand:
