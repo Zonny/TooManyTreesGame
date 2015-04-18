@@ -75,14 +75,16 @@
 
 init python:
     import os
-    pre_game_path = os.getcwd()
-    suf_game_path = '/TooManyTreesGame/game'
-    game_path = pre_game_path + suf_game_path
     
-    def dir_filenames(path):
+    pregame_path = renpy.list_files()
+    def dir_filenames(folder_name):
+        '''
+        Give a folder_name. Try to be as specific as possible.
+        '''
         result = []
-        for filename in os.listdir(game_path + '/' + path):
-            result.append(path + '/' + filename)
+        for filename in pregame_path:
+            if filename.find(folder_name) != -1:
+                result.append(filename)
             
         return result
         
@@ -95,17 +97,19 @@ init:
     
     #Returns a list of string names in a directory with path+nameoffile
     python:
-       player_stand = dir_filenames('images/characters/player_standing/')
-       player_jump = dir_filenames('images/characters/player_jumping/')
-       #estella_stand = dir_filenames('images/characters/estella_standing/')
-       #estella_jump = dir_filenames('images/characters/estella_jumping/')
-       #lance_stand = dir_filenames('images/characters/lance_standing/')
-       #lance_jump = dir_filenames('images/characters/lance_jumping/')
-       #hiruka_stand = dir_filenames('images/characters/hiruka_standing/')
-       #hiruka_jump = dir_filenames('images/characters/hiruka_jumping/')
+       player_stand = dir_filenames('player_standing')
+       player_jump = dir_filenames('player_jumping')
+       estella_stand = dir_filenames('estella_standing')
+       estella_jump = dir_filenames('estella_jumping')
+       lance_stand = dir_filenames('lance_standing')
+       lance_jump = dir_filenames('lance_jumping')
+       hiruka_stand = dir_filenames('hiruka_standing')
+       hiruka_jump = dir_filenames('hiruka_jumping')
+       oneal_stand = dir_filenames('oneal_standing')
+       oneal_jump = dir_filenames('oneal_jumping')
        
         
-    image player_char_stand:
+    image main_char_standing:
         xalign .5 yalign .27
 
         player_stand[0]
@@ -120,141 +124,119 @@ init:
 
         repeat
         
-    image oneal_stand:
+    image oneal_standing:
         xalign .20 yalign .45
         
-        'images/characters/blue_standing/alert_0.png'
-        #main_standing[0]
+        oneal_stand[0]
         pause .5
-        'images/characters/blue_standing/alert_1.png'
-        #main_standin[1]
+        oneal_stand[1]
         pause .5
-        'images/characters/blue_standing/alert_2.png'
-        #etc
+        oneal_stand[2]
         pause .5
-        'images/characters/blue_standing/alert_3.png'
+        oneal_stand[3]
         pause .5
-        'images/characters/blue_standing/alert_4.png'
+        oneal_stand[4]
+        
         repeat
         
-    image estella_stand:
+    image estella_standing:
         xalign .35 yalign .45
         
-        'images/characters/browcut_standing/alert_0.png'
-        #main_standing[0]
+        estella_stand[0]
         pause .5
-        'images/characters/browcut_standing/alert_1.png'
-        #main_standin[1]
+        estella_stand[1]
         pause .5
-        'images/characters/browcut_standing/alert_2.png'
+        estella_stand[2]
         #etc
         pause .5
-        'images/characters/browcut_standing/alert_3.png'
+        estella_stand[3]
         pause .5
-        'images/characters/browcut_standing/alert_4.png'
+        estella_stand[4]
+        
         repeat
     
-    image friend_3_stand:
+    image lance_standing:
         xalign .65 yalign .45
         
-        'images/characters/golden_standing/alert_0.png'
-        #main_standing[0]
+        lance_stand[0]
         pause .5
-        'images/characters/golden_standing/alert_1.png'
-        #main_standin[1]
+        lance_stand[1]
         pause .5
-        'images/characters/golden_standing/alert_2.png'
-        #etc
+        lance_stand[2]
         pause .5
-        'images/characters/golden_standing/alert_3.png'
+        lance_stand[3]
         pause .5
-        'images/characters/golden_standing/alert_4.png'
+        lance_stand[4]
+        
         repeat
     
-    image friend_4_stand:
+    image hiruka_standing:
         xalign .80 yalign .45
         
-        'images/characters/nice_standing/alert_0.png'
-        #main_standing[0]
+        hiruka_stand[0]
         pause .5
-        'images/characters/nice_standing/alert_1.png'
-        #main_standin[1]
+        hiruka_stand[1]
         pause .5
-        'images/characters/nice_standing/alert_2.png'
-        #etc
+        hiruka_stand[2]
         pause .5
-        'images/characters/nice_standing/alert_3.png'
+        hiruka_stand[3]
         pause .5
-        'images/characters/nice_standing/alert_4.png'
+        hiruka_stand[4]
+        
         repeat
 
-    image main_char_jump:
+    image main_char_jumping:
         xalign .5 yalign .45
-
-        #'images/characters/main_jumping/alert_0.png'
-        #main_standing[0]
-        pause 1.5
-        #'images/characters/main_jumping/jump_0.png'
-        easeout .3 yalign .3
-        #main_standin[1]
         
+        player_jump[0]
+        pause 1.5
+        player_jump[1]
+        easeout .3 yalign .3
         easeout .3 yalign.45
 
         repeat
         
-    image friend_1_jump:
+    image oneal_jumping:
         xalign .20 yalign .45
         
-        'images/characters/blue_jumping/alert_0.png'
-        #main_standing[0]
+        oneal_jump[0]
         pause .75
-        'images/characters/blue_jumping/jump_0.png'
+        oneal_jump[1]
         easeout .3 yalign .3
-        #main_standin[1]
-        
         easeout .3 yalign.45
 
         repeat
         
-    image friend_2_jump:
+    image estella_jumping:
         xalign .35 yalign .45
         
-        'images/characters/browcut_jumping/alert_0.png'
-        #main_standing[0]
+        estella_jump[0]
         pause .40
-        'images/characters/browcut_jumping/jump_0.png'
+        estella_jump[1]
         easeout .3 yalign .3
-        #main_standin[1]
-        
         easeout .3 yalign.45
 
         repeat
         
-    image friend_3_jump:
+    image lance_jumping:
         xalign .65 yalign .45
         
-        'images/characters/golden_jumping/alert_0.png'
-        #main_standing[0]
+        lance_jump[0]
         pause .65
-        'images/characters/golden_jumping/jump_0.png'
+        lance_jump[1]
         easeout .3 yalign .3
-        #main_standin[1]
-        
         easeout .3 yalign.45
 
         repeat
         
     
-    image friend_4_jump:
+    image hiruka_jumping:
         xalign .80 yalign .45
         
-        'images/characters/nice_jumping/alert_0.png'
-        #main_standing[0]
+        hiruka_jump[0]
         pause .3
-        'images/characters/nice_jumping/jump_0.png'
+        hiruka_jump[1]
         easeout .3 yalign .3
-        #main_standin[1]
-        
         easeout .3 yalign.45
 
         repeat
@@ -276,44 +258,44 @@ label start:
 label dream_scene:
     scene bg_dream_thoughtcloud
     show bg_basketball
-    show main_char_stand
+    show main_char_standing
     inner_t_norm "zzz...zZZ"
     
     hide mainavatar_normal
     inner_t_cry "I.. need.. teammates.zzzZZ"
     
-    show friend_1_stand:
+    show oneal_standing:
         alpha 0
         linear 1 alpha 1.0
-    show friend_2_stand:
+    show estella_standing:
         alpha 0
         linear .5 alpha 1.0
-    show friend_3_stand:
+    show lance_standing:
         alpha 0
         linear .6 alpha 1.0
-    show friend_4_stand:
+    show hiruka_standing:
         alpha 0
         linear .8 alpha 1.0
     inner_t_cry "zz..ZZZ"
     
-    show main_char_stand:
+    show main_char_standing:
         alpha 1
         linear .3 alpha 0.0
-    hide main_char_stand
-    hide friend_1_stand
-    hide friend_2_stand
-    hide friend_3_stand
-    hide friend_4_stand
+    hide main_char_standing
+    hide oneal_standing
+    hide estella_standing
+    hide lance_standing
+    hide hiruka_standing
     
     
     
-    show main_char_jump:
+    show main_char_jumping:
         alpha 0
         linear .3 alpha 1
-    show friend_1_jump
-    show friend_2_jump
-    show friend_3_jump
-    show friend_4_jump
+    show oneal_jumping
+    show estella_jumping
+    show lance_jumping
+    show hiruka_jumping
     inner_t_smile "I FOUND TEAMMATES! COOOL!!"
     
     return
