@@ -1,4 +1,4 @@
-Fri Apr 17 23:16:00 2015
+Fri Apr 17 23:33:34 2015
 Windows-8-6.2.9200
 Ren'Py 6.99.1.329
 AppJam Test 2015 0.0
@@ -11,7 +11,7 @@ ImportError: DLL load failed: The specified module could not be found.
 Unknown renderer: angle
 
 Windowed mode.
-Screen sizes: virtual=(800, 600) physical=(656, 492)
+Screen sizes: virtual=(800, 600) physical=(920, 690)
 Vendor: 'Intel'
 Renderer: 'Intel(R) HD Graphics 5500'
 Version: '4.3.0 - Build 10.18.10.4013'
@@ -222,8 +222,8 @@ Texture testing:
 Performance test:
 - Target is 5 frames in 0.333333333333 seconds.
 - Frame drawn at 0.000000 seconds.
-- Frame drawn at 0.024000 seconds.
-- Frame drawn at 0.036000 seconds.
-- Frame drawn at 0.053000 seconds.
-- Frame drawn at 0.070000 seconds.
-- 0.070000 seconds to render 5 frames.
+- Frame drawn at 0.018000 seconds.
+- Frame drawn at 0.032000 seconds.
+- Frame drawn at 0.049000 seconds.
+- Frame drawn at 0.066000 seconds.
+- 0.066000 seconds to render 5 frames.
