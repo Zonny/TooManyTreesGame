@@ -1,4 +1,4 @@
-Fri Apr 17 22:12:43 2015
+Fri Apr 17 22:47:50 2015
 Windows-8-6.2.9200
 Ren'Py 6.99.1.329
 AppJam Test 2015 0.0
@@ -315,4 +315,17 @@ Using copy RTT.
 Using gl renderer.
 Texture testing:
 - Hardware max texture size: 16384
-- 64px textu
+- 64px textures work.
+- 128px textures work.
+- 256px textures work.
+- 512px textures work.
+- 1024px textures work.
+- 2048px textures work.
+Performance test:
+- Target is 5 frames in 0.333333333333 seconds.
+- Frame drawn at 0.000000 seconds.
+- Frame drawn at 0.110000 seconds.
+- Frame drawn at 0.281000 seconds.
+- Frame drawn at 0.281000 seconds.
+- Frame drawn at 0.297000 seconds.
+- 0.297000 seconds to render 5 frames.
