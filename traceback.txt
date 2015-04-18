@@ -1,25 +1,19 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
-While loading <'Image' 'images/coach.png'>:
-  File "game/script.rpy", line 55, in script
-    coach "What gender are you?"
-IOError: Couldn't find file 'images/coach.png'.
+While loading <'Image' 'school.png'>:
+IOError: Couldn't find file 'school.png'.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 55, in script
-    coach "What gender are you?"
-  File "C:\msysgit\renpy-6.99.1-sdk\renpy\ast.py", line 593, in execute
-    renpy.exports.say(who, what, interact=self.interact)
-  File "C:\msysgit\renpy-6.99.1-sdk\renpy\exports.py", line 1033, in say
-    who(what, interact=interact)
-  File "C:\msysgit\renpy-6.99.1-sdk\renpy\character.py", line 826, in __call__
-    self.do_display(who, what, cb_args=self.cb_args, **display_args)
-  File "C:\msysgit\renpy-6.99.1-sdk\renpy\character.py", line 688, in do_display
-    **display_args)
-  File "C:\msysgit\renpy-6.99.1-sdk\renpy\character.py", line 491, in display_say
-    rv = renpy.ui.interact(mouse='say', type=type, roll_forward=roll_forward)
+  File "renpy/common/_layout/screen_main_menu.rpym", line 29, in script
+    $ ui.interact()
+  File "C:\msysgit\renpy-6.99.1-sdk\renpy\ast.py", line 785, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "C:\msysgit\renpy-6.99.1-sdk\renpy\python.py", line 1432, in py_exec_bytecode
+    exec bytecode in globals, locals
+  File "renpy/common/_layout/screen_main_menu.rpym", line 29, in <module>
+    $ ui.interact()
   File "C:\msysgit\renpy-6.99.1-sdk\renpy\ui.py", line 247, in interact
     rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
   File "C:\msysgit\renpy-6.99.1-sdk\renpy\display\core.py", line 2243, in interact
@@ -50,14 +44,20 @@ Full traceback:
     cpdef render(d, object widtho, object heighto, double st, double at):
   File "renpy/display/render.pyx", line 175, in renpy.display.render.render (gen\renpy.display.render.c:2600)
     rv = d.render(widtho, heighto, st, at)
-  File "renpy/display/accelerator.pyx", line 104, in renpy.display.accelerator.transform_render (gen\renpy.display.accelerator.c:1876)
-    cr = render(child, widtho, heighto, st - self.child_st_base, at)
+  File "C:\msysgit\renpy-6.99.1-sdk\renpy\display\screen.py", line 598, in render
+    child = renpy.display.render.render(self.child, w, h, st, at)
+  File "renpy/display/render.pyx", line 99, in renpy.display.render.render (gen\renpy.display.render.c:2921)
+    cpdef render(d, object widtho, object heighto, double st, double at):
   File "renpy/display/render.pyx", line 175, in renpy.display.render.render (gen\renpy.display.render.c:2600)
     rv = d.render(widtho, heighto, st, at)
-  File "C:\msysgit\renpy-6.99.1-sdk\renpy\display\image.py", line 210, in render
-    return wrap_render(self.target, width, height, st, at)
-  File "C:\msysgit\renpy-6.99.1-sdk\renpy\display\image.py", line 82, in wrap_render
-    rend = render(child, w, h, st, at)
+  File "C:\msysgit\renpy-6.99.1-sdk\renpy\display\layout.py", line 629, in render
+    surf = render(child, width, height, cst, cat)
+  File "renpy/display/render.pyx", line 99, in renpy.display.render.render (gen\renpy.display.render.c:2921)
+    cpdef render(d, object widtho, object heighto, double st, double at):
+  File "renpy/display/render.pyx", line 175, in renpy.display.render.render (gen\renpy.display.render.c:2600)
+    rv = d.render(widtho, heighto, st, at)
+  File "C:\msysgit\renpy-6.99.1-sdk\renpy\display\layout.py", line 995, in render
+    back = render(style.background, bw, bh, st, at)
   File "renpy/display/render.pyx", line 99, in renpy.display.render.render (gen\renpy.display.render.c:2921)
     cpdef render(d, object widtho, object heighto, double st, double at):
   File "renpy/display/render.pyx", line 175, in renpy.display.render.render (gen\renpy.display.render.c:2600)
@@ -70,8 +70,8 @@ Full traceback:
     surf = renpy.display.pgrender.load_image(renpy.loader.load(self.filename), self.filename)
   File "C:\msysgit\renpy-6.99.1-sdk\renpy\loader.py", line 450, in load
     raise IOError("Couldn't find file '%s'." % name)
-IOError: Couldn't find file 'images/coach.png'.
+IOError: Couldn't find file 'school.png'.
 
 Windows-8-6.2.9200
 Ren'Py 6.99.1.329
-AppJam Test 2015 0.0
+test 0.0
