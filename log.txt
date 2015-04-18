@@ -1,7 +1,7 @@
-Sat Apr 18 08:59:53 2015
+Sat Apr 18 09:20:46 2015
 Windows-8-6.2.9200
 Ren'Py 6.99.1.329
-test 0.0
+ 
 
 
 Windowed mode.
@@ -321,11 +321,3 @@ Texture testing:
 - 512px textures work.
 - 1024px textures work.
 - 2048px textures work.
-Performance test:
-- Target is 5 frames in 0.333333333333 seconds.
-- Frame drawn at 0.000000 seconds.
-- Frame drawn at 0.130000 seconds.
-- Frame drawn at 0.131000 seconds.
-- Frame drawn at 0.132000 seconds.
-- Frame drawn at 0.135000 seconds.
-- 0.135000 seconds to render 5 frames.

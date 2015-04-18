@@ -2,8 +2,24 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 33: invalid syntax
-    Character("Kyle", color="#c8ffc8", window_left_padding=160, show_side_image=(mainCharacterHead, xalign=0.0,yalign=1.0))
-                                                                                                           ^
+File "game/script.rpy", line 1: expected statement.
+    <<<<<<< HEAD
+                ^
+
+File "game/script.rpy", line 2: expected statement.
+    ﻿
+     ^
+
+File "game/script.rpy", line 3: expected statement.
+    =======
+          ^
+
+File "game/script.rpy", line 4: expected statement.
+    ﻿
+     ^
+
+File "game/script.rpy", line 52: expected statement.
+    >>>>>>> karenbranch
+                       ^
 
 Ren'Py Version: Ren'Py 6.99.1.329
