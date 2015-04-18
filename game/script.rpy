@@ -110,7 +110,7 @@ init:
        
         
     image main_char_standing:
-        xalign .5 yalign .27
+        xalign .5 yalign .28
 
         player_stand[0]
         pause .5
@@ -186,13 +186,13 @@ init:
         repeat
 
     image main_char_jumping:
-        xalign .5 yalign .45
+        xalign .5 yalign .46
         
         player_jump[0]
         pause 1.5
         player_jump[1]
         easeout .3 yalign .3
-        easeout .3 yalign.45
+        easeout .3 yalign.46
 
         repeat
         
