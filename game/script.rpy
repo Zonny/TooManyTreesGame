@@ -74,9 +74,12 @@
 ## Alvin's Comment
 
 init python:
-    game_path = 'C:\Users\Alvin\Documents\Renpy\TooManyTreesGame\game'
+    import os
+    pre_game_path = os.getcwd()
+    suf_game_path = '/TooManyTreesGame/game'
+    game_path = pre_game_path + suf_game_path
+    
     def dir_filenames(path):
-        import os
         result = []
         for filename in os.listdir(game_path + '/' + path):
             result.append(path + '/' + filename)
@@ -94,6 +97,7 @@ init:
     python:
        player_stand = dir_filenames('images/characters/player_standing/')
        player_jump = dir_filenames('images/characters/player_jumping/')
+<<<<<<< HEAD
        estella_stand = dir_filenames('images/characters/estella_standing/')
        estella_jump = dir_filenames('images/characters/estella_jumping/')
        lance_stand = dir_filenames('images/characters/lance_standing/')
@@ -103,6 +107,14 @@ init:
        oneal_stand = dir_filenames('images/characters/oneal_standing/')
        oneal_jump = dir_filenames('images/characters/oneal_standing/')
        
+=======
+       #estella_stand = dir_filenames('images/characters/estella_standing/')
+       #estella_jump = dir_filenames('images/characters/estella_jumping/')
+       #lance_stand = dir_filenames('images/characters/lance_standing/')
+       #lance_jump = dir_filenames('images/characters/lance_jumping/')
+       #hiruka_stand = dir_filenames('images/characters/hiruka_standing/')
+       #hiruka_jump = dir_filenames('images/characters/hiruka_jumping/')
+>>>>>>> fb03cac6e5549c770c446929d8d3341ba855a70a
        
         
     image player_char_stand:
@@ -191,10 +203,10 @@ init:
     image main_char_jump:
         xalign .5 yalign .45
 
-        'images/characters/main_jumping/alert_0.png'
+        #'images/characters/main_jumping/alert_0.png'
         #main_standing[0]
         pause 1.5
-        'images/characters/main_jumping/jump_0.png'
+        #'images/characters/main_jumping/jump_0.png'
         easeout .3 yalign .3
         #main_standin[1]
         
