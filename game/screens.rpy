@@ -181,6 +181,7 @@ screen main_menu():
 
     # The background of the main menu.
     window:
+        
         style "mm_root"
 
     # The main menu buttons.

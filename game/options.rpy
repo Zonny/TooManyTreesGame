@@ -23,11 +23,11 @@ init -1 python hide:
     ## This controls the title of the window, when Ren'Py is
     ## running in a window.
 
-    config.window_title = u"AppJam Test 2015"
+    config.window_title = u"test"
 
     # These control the name and version of the game, that are reported
     # with tracebacks and other debugging logs.
-    config.name = "AppJam Test 2015"
+    config.name = "test"
     config.version = "0.0"
 
     #########################################
@@ -39,44 +39,44 @@ init -1 python hide:
     ## The theme function takes a number of parameters that can
     ## customize the color scheme.
 
-    theme.threeD(
-        ## Theme: 3D
-        ## Color scheme: Basic Blue
+    theme.austen(
+        ## Theme: Austen
+        ## Color scheme: City Lights
 
         ## The color of an idle widget face.
-        widget = "#003c78",
+        widget = "#45ada8",
 
         ## The color of a focused widget face.
-        widget_hover = "#0050a0",
+        widget_hover = "#2e5860",
 
         ## The color of the text in a widget.
-        widget_text = "#c8ffff",
+        widget_text = "#9de0ad",
 
         ## The color of the text in a selected widget. (For
         ## example, the current value of a preference.)
-        widget_selected = "#ffffc8",
+        widget_selected = "#e5fcc2",
 
         ## The color of a disabled widget face.
-        disabled = "#404040",
+        disabled = "#638e89",
 
         ## The color of disabled widget text.
-        disabled_text = "#c8c8c8",
+        disabled_text = "#594f4f",
 
         ## The color of informational labels.
-        label = "#ffffff",
+        label = "#e5fcc2",
 
         ## The color of a frame containing widgets.
-        frame = "#6496c8",
+        frame = "#547980",
 
         ## The background of the main menu. This can be a color
         ## beginning with '#', or an image filename. The latter
         ## should take up the full height and width of the screen.
-        mm_root = "#dcebff",
+        mm_root = "school.png",
 
         ## The background of the game menu. This can be a color
         ## beginning with '#', or an image filename. The latter
         ## should take up the full height and width of the screen.
-        gm_root = "#dcebff",
+        gm_root = "#594f4f",
 
         ## If this is True, the in-game window is rounded. If False,
         ## the in-game window is square.
@@ -207,19 +207,19 @@ init -1 python hide:
     ## Transitions.
 
     ## Used when entering the game menu from the game.
-    config.enter_transition = None
+    config.enter_transition = dissolve
 
     ## Used when exiting the game menu to the game.
-    config.exit_transition = None
+    config.exit_transition = dissolve
 
     ## Used between screens of the game menu.
-    config.intra_transition = None
+    config.intra_transition = Dissolve(.5)
 
     ## Used when entering the game menu from the main menu.
-    config.main_game_transition = None
+    config.main_game_transition = Dissolve(.5)
 
     ## Used when returning to the main menu from the game.
-    config.game_main_transition = None
+    config.game_main_transition = Dissolve(.5)
 
     ## Used when entering the main menu from the splashscreen.
     config.end_splash_transition = None
@@ -262,7 +262,7 @@ init -1 python hide:
     ## stored. (It needs to be set early, before any other init code
     ## is run, so the persistent information can be found by the init code.)
 python early:
-    config.save_directory = "AppJam Test 2015-1429054725"
+    config.save_directory = "test-1429075713"
 
 init -1 python hide:
     #########################################
@@ -278,7 +278,7 @@ init -1 python hide:
 
     ## The default text speed in characters per second. 0 is infinite.
 
-    config.default_text_cps = 0
+    config.default_text_cps = 30
 
     ## The default auto-forward time setting.
 
