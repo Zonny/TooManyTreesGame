@@ -1,4 +1,4 @@
-Fri Apr 17 23:33:34 2015
+Sat Apr 18 00:34:56 2015
 Windows-8-6.2.9200
 Ren'Py 6.99.1.329
 AppJam Test 2015 0.0
@@ -222,8 +222,8 @@ Texture testing:
 Performance test:
 - Target is 5 frames in 0.333333333333 seconds.
 - Frame drawn at 0.000000 seconds.
-- Frame drawn at 0.018000 seconds.
-- Frame drawn at 0.032000 seconds.
-- Frame drawn at 0.049000 seconds.
-- Frame drawn at 0.066000 seconds.
-- 0.066000 seconds to render 5 frames.
+- Frame drawn at 0.041000 seconds.
+- Frame drawn at 0.065000 seconds.
+- Frame drawn at 0.083000 seconds.
+- Frame drawn at 0.099000 seconds.
+- 0.099000 seconds to render 5 frames.
