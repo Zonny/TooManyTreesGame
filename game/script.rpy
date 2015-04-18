@@ -74,20 +74,20 @@
 ## Alvin's Comment
 
 init python:
-    game_path = 'C:\Users\Alvin\Documents\Renpy\TooManyTreesGame\game'
+    import os
+    pre_game_path = os.getcwd()
+    suf_game_path = '/TooManyTreesGame/game'
+    game_path = pre_game_path + suf_game_path
+    
     def dir_filenames(path):
-        import os
         result = []
         for filename in os.listdir(game_path + '/' + path):
             result.append(path + '/' + filename)
-        
-        print result
             
         return result
         
 init:
-    #Characters
-    define narrator = Character('Narrator')
+
     
     #Alvin's images
     image bg_dream_thoughtcloud = im.Scale('images/backgrounds/dream_thoughtcloud.PNG',width = 800, height= 550, yalign=0.0)
@@ -95,23 +95,179 @@ init:
     
     #Returns a list of string names in a directory with path+nameoffile
     python:
-       main_standing = dir_filenames('images/characters/main_standing/')
+       player_stand = dir_filenames('images/characters/player_standing/')
+       player_jump = dir_filenames('images/characters/player_jumping/')
+       #estella_stand = dir_filenames('images/characters/estella_standing/')
+       #estella_jump = dir_filenames('images/characters/estella_jumping/')
+       #lance_stand = dir_filenames('images/characters/lance_standing/')
+       #lance_jump = dir_filenames('images/characters/lance_jumping/')
+       #hiruka_stand = dir_filenames('images/characters/hiruka_standing/')
+       #hiruka_jump = dir_filenames('images/characters/hiruka_jumping/')
+       
         
-    image main_char:
+    image player_char_stand:
         xalign .5 yalign .27
 
-        'images/characters/main_standing/alert_0.png'
+        player_stand[0]
         pause .5
-        'images/characters/main_standing/alert_1.png'
+        player_stand[1]
         pause .5
-        'images/characters/main_standing/alert_2.png'
+        player_stand[2]
         pause .5
-        'images/characters/main_standing/alert_3.png'
+        player_stand[3]
         pause .5
-        'images/characters/main_standing/alert_4.png'
+        player_stand[4]
 
         repeat
         
+    image oneal_stand:
+        xalign .20 yalign .45
+        
+        'images/characters/blue_standing/alert_0.png'
+        #main_standing[0]
+        pause .5
+        'images/characters/blue_standing/alert_1.png'
+        #main_standin[1]
+        pause .5
+        'images/characters/blue_standing/alert_2.png'
+        #etc
+        pause .5
+        'images/characters/blue_standing/alert_3.png'
+        pause .5
+        'images/characters/blue_standing/alert_4.png'
+        repeat
+        
+    image estella_stand:
+        xalign .35 yalign .45
+        
+        'images/characters/browcut_standing/alert_0.png'
+        #main_standing[0]
+        pause .5
+        'images/characters/browcut_standing/alert_1.png'
+        #main_standin[1]
+        pause .5
+        'images/characters/browcut_standing/alert_2.png'
+        #etc
+        pause .5
+        'images/characters/browcut_standing/alert_3.png'
+        pause .5
+        'images/characters/browcut_standing/alert_4.png'
+        repeat
+    
+    image friend_3_stand:
+        xalign .65 yalign .45
+        
+        'images/characters/golden_standing/alert_0.png'
+        #main_standing[0]
+        pause .5
+        'images/characters/golden_standing/alert_1.png'
+        #main_standin[1]
+        pause .5
+        'images/characters/golden_standing/alert_2.png'
+        #etc
+        pause .5
+        'images/characters/golden_standing/alert_3.png'
+        pause .5
+        'images/characters/golden_standing/alert_4.png'
+        repeat
+    
+    image friend_4_stand:
+        xalign .80 yalign .45
+        
+        'images/characters/nice_standing/alert_0.png'
+        #main_standing[0]
+        pause .5
+        'images/characters/nice_standing/alert_1.png'
+        #main_standin[1]
+        pause .5
+        'images/characters/nice_standing/alert_2.png'
+        #etc
+        pause .5
+        'images/characters/nice_standing/alert_3.png'
+        pause .5
+        'images/characters/nice_standing/alert_4.png'
+        repeat
+
+    image main_char_jump:
+        xalign .5 yalign .45
+
+        #'images/characters/main_jumping/alert_0.png'
+        #main_standing[0]
+        pause 1.5
+        #'images/characters/main_jumping/jump_0.png'
+        easeout .3 yalign .3
+        #main_standin[1]
+        
+        easeout .3 yalign.45
+
+        repeat
+        
+    image friend_1_jump:
+        xalign .20 yalign .45
+        
+        'images/characters/blue_jumping/alert_0.png'
+        #main_standing[0]
+        pause .75
+        'images/characters/blue_jumping/jump_0.png'
+        easeout .3 yalign .3
+        #main_standin[1]
+        
+        easeout .3 yalign.45
+
+        repeat
+        
+    image friend_2_jump:
+        xalign .35 yalign .45
+        
+        'images/characters/browcut_jumping/alert_0.png'
+        #main_standing[0]
+        pause .40
+        'images/characters/browcut_jumping/jump_0.png'
+        easeout .3 yalign .3
+        #main_standin[1]
+        
+        easeout .3 yalign.45
+
+        repeat
+        
+    image friend_3_jump:
+        xalign .65 yalign .45
+        
+        'images/characters/golden_jumping/alert_0.png'
+        #main_standing[0]
+        pause .65
+        'images/characters/golden_jumping/jump_0.png'
+        easeout .3 yalign .3
+        #main_standin[1]
+        
+        easeout .3 yalign.45
+
+        repeat
+        
+    
+    image friend_4_jump:
+        xalign .80 yalign .45
+        
+        'images/characters/nice_jumping/alert_0.png'
+        #main_standing[0]
+        pause .3
+        'images/characters/nice_jumping/jump_0.png'
+        easeout .3 yalign .3
+        #main_standin[1]
+        
+        easeout .3 yalign.45
+
+        repeat
+    
+    image mainavatar_smile = im.Scale(Image("images/avatars/main/smile.png"), 125, 125, xalign = .02, yalign = .95)
+    image mainavatar_cry = im.Scale(Image("images/avatars/main/cry.png"),125, 125, xalign = .02, yalign = .95)
+    image mainavatar_normal = im.Scale(Image("images/avatars/main/normal.png"), 125,125, xalign = .02, yalign = .95)
+    
+    #Characters
+    define narrator = Character('Narrator')
+    define inner_t_norm = Character("Inner Thought", show_side_image='mainavatar_normal')
+    define inner_t_cry = Character("Inner Thought", show_side_image='mainavatar_cry')
+    define inner_t_smile = Character("Inner Thought", show_side_image='mainavatar_smile')
 label start:
     call dream_scene
     
@@ -120,9 +276,46 @@ label start:
 label dream_scene:
     scene bg_dream_thoughtcloud
     show bg_basketball
-    show main_char
+    show main_char_stand
+    inner_t_norm "zzz...zZZ"
     
-    narrator "Hello"
+    hide mainavatar_normal
+    inner_t_cry "I.. need.. teammates.zzzZZ"
+    
+    show friend_1_stand:
+        alpha 0
+        linear 1 alpha 1.0
+    show friend_2_stand:
+        alpha 0
+        linear .5 alpha 1.0
+    show friend_3_stand:
+        alpha 0
+        linear .6 alpha 1.0
+    show friend_4_stand:
+        alpha 0
+        linear .8 alpha 1.0
+    inner_t_cry "zz..ZZZ"
+    
+    show main_char_stand:
+        alpha 1
+        linear .3 alpha 0.0
+    hide main_char_stand
+    hide friend_1_stand
+    hide friend_2_stand
+    hide friend_3_stand
+    hide friend_4_stand
+    
+    
+    
+    show main_char_jump:
+        alpha 0
+        linear .3 alpha 1
+    show friend_1_jump
+    show friend_2_jump
+    show friend_3_jump
+    show friend_4_jump
+    inner_t_smile "I FOUND TEAMMATES! COOOL!!"
+    
     return
     
 

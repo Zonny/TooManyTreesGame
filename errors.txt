@@ -2,8 +2,8 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 102: Line is indented, but the preceding ATL statement does not expect a block. Please check this line's indentation.
-    for frame in result:
-    ^
+File "game/script.rpy", line 260: invalid syntax
+    Image("images/avatars/main/normal.png", xalign = .1, yalign.85)
+                                                                  ^
 
 Ren'Py Version: Ren'Py 6.99.1.329
