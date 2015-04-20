@@ -10,7 +10,7 @@ init -998:
     image bg genderChoice = Image("images/startMenuBG.PNG")
     image bg_dream_thoughtcloud = im.Scale('images/backgrounds/dream_thoughtcloud.PNG',width = 800, height= 550, yalign=0.0)
     image bg_basketball = im.Scale('images/backgrounds/basketball.PNG', width = 550, height= 250, yalign=0.2, xalign = .5)
-    
+    #image bg_dream_thoughtcloud = im.FactorScale('images/backgrounds/dream_thoughtcloud.PNG', 1.5)
     #Returns a list of string names in a directory with path+nameoffile
     python:
        male_player_stand = dir_filenames('male_player_standing')
