@@ -16,6 +16,7 @@ label intro:
         python: 
             name = renpy.input("{cps=20}What is your name?{/cps}")
             name = name.strip()
+            gender = 'male'
             if not name:
                 name = "Kyle"
         "{cps=20}Hello, [name]!{/cps}"
@@ -26,6 +27,7 @@ label intro:
         python:
             name = renpy.input("{cps=20}What is your name?{/cps}")
             name = name.strip()
+            gender = 'female'
         jump choice1_done
         
     label choice1_done:
