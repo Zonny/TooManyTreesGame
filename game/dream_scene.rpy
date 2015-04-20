@@ -1,7 +1,8 @@
 label dream_scene:
-    python:
-        if gender == 'male':
-            main_char_standing
+    image main_char_standing = ConditionSwitch("gender == 'male'", "male_char_standing",
+                                        "gender == 'female'", "female_char_standing")
+    image main_char_jumping = ConditionSwitch("gender == 'male'", "male_char_jumping",
+                                        "gender == 'female'", "female_char_jumping")
     scene bg_dream_thoughtcloud
     show bg_basketball
     show main_char_standing
@@ -33,8 +34,6 @@ label dream_scene:
     hide lance_standing
     hide hiruka_standing
     
-    
-    
     show main_char_jumping:
         alpha 0
         linear .3 alpha 1
@@ -42,7 +41,6 @@ label dream_scene:
     show estella_jumping
     show lance_jumping
     show hiruka_jumping
-    inner_t "I FOUND TEAMMATES! COOOL!!"
+    inner_t_smile "I FOUND TEAMMATES! COOOL!!"
     
     return
-    

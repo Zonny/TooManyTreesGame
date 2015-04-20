@@ -1,28 +1,44 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/images.rpy", line 189, in script call
-    call begin_script
-  File "game/script.rpy", line 2, in script call
-    call start
-  File "game/script.rpy", line 7, in script
-    scene black with dissolve
-Exception: With statements may not run while in init phase.
+  File "game/script.rpy", line 21, in script call
+    call dream_scene
+  File "game/script.rpy", line 72, in script
+    show main_char_standing
+Exception: Switch could not choose a displayable.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/images.rpy", line 189, in script call
-    call begin_script
-  File "game/script.rpy", line 2, in script call
-    call start
-  File "game/script.rpy", line 7, in script
-    scene black with dissolve
-  File "C:\msysgit\renpy-6.99.1-sdk\renpy\ast.py", line 1236, in execute
-    renpy.exports.with_statement(trans, paired)
-  File "C:\msysgit\renpy-6.99.1-sdk\renpy\exports.py", line 1253, in with_statement
-    raise Exception("With statements may not run while in init phase.")
-Exception: With statements may not run while in init phase.
+  File "game/script.rpy", line 21, in script call
+    call dream_scene
+  File "game/script.rpy", line 72, in script
+    show main_char_standing
+  File "C:\Users\Alvin\Downloads\renpy-6.99.1-sdk\renpy\ast.py", line 1040, in execute
+    show_imspec(self.imspec, atl=getattr(self, "atl", None))
+  File "C:\Users\Alvin\Downloads\renpy-6.99.1-sdk\renpy\ast.py", line 1012, in show_imspec
+    atl=atl)
+  File "C:\Users\Alvin\Downloads\renpy-6.99.1-sdk\renpy\exports.py", line 544, in show
+    sls.add(layer, img, key, zorder, behind, at_list=at_list, name=name, atl=atl, default_transform=renpy.config.default_transform, transient=transient)
+  File "C:\Users\Alvin\Downloads\renpy-6.99.1-sdk\renpy\display\core.py", line 847, in add
+    thing._show()
+  File "C:\Users\Alvin\Downloads\renpy-6.99.1-sdk\renpy\display\motion.py", line 913, in _show
+    self.update_state()
+  File "C:\Users\Alvin\Downloads\renpy-6.99.1-sdk\renpy\display\motion.py", line 787, in update_state
+    pos = child.get_placement()
+  File "C:\Users\Alvin\Downloads\renpy-6.99.1-sdk\renpy\display\image.py", line 217, in get_placement
+    return self.target.get_placement()
+  File "C:\Users\Alvin\Downloads\renpy-6.99.1-sdk\renpy\display\layout.py", line 281, in get_placement
+    xpos, ypos, xanchor, yanchor, xoffset, yoffset, subpixel = self.child.get_placement()
+  File "C:\Users\Alvin\Downloads\renpy-6.99.1-sdk\renpy\display\layout.py", line 1125, in get_placement
+    self.update(0, 0)
+  File "C:\Users\Alvin\Downloads\renpy-6.99.1-sdk\renpy\display\layout.py", line 1094, in update
+    child, redraw = self.function(st, at, *self.args, **self.kwargs)
+  File "C:\Users\Alvin\Downloads\renpy-6.99.1-sdk\renpy\display\layout.py", line 1157, in condition_switch_show
+    return condition_switch_pick(switch), None
+  File "C:\Users\Alvin\Downloads\renpy-6.99.1-sdk\renpy\display\layout.py", line 1154, in condition_switch_pick
+    raise Exception("Switch could not choose a displayable.")
+Exception: Switch could not choose a displayable.
 
 Windows-8-6.2.9200
 Ren'Py 6.99.1.329

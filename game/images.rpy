@@ -1,22 +1,7 @@
 #Animations for all scenes
-init python:
-    import os
-   
-    pregame_path = renpy.list_files()
-    def dir_filenames(folder_name):
-        '''
-        Give a folder_name. Try to be as specific as possible.
-        '''
-        result = []
-        for filename in pregame_path:
-            if filename.find(folder_name) != -1:
-                result.append(filename)
-            
-        return result
-        
 
         
-init:
+init -998:
     
     image boy = Image("images/boy.PNG")
     image girl = Image("images/girl.PNG")
@@ -28,8 +13,10 @@ init:
     
     #Returns a list of string names in a directory with path+nameoffile
     python:
-       player_stand = dir_filenames('player_standing')
-       player_jump = dir_filenames('player_jumping')
+       male_player_stand = dir_filenames('male_player_standing')
+       male_player_jump = dir_filenames('male_player_jumping')
+       female_player_stand = dir_filenames('female_player_standing')
+       female_player_jump = dir_filenames('female_player_jumping')
        estella_stand = dir_filenames('estella_standing')
        estella_jump = dir_filenames('estella_jumping')
        lance_stand = dir_filenames('lance_standing')
@@ -38,20 +25,46 @@ init:
        hiruka_jump = dir_filenames('hiruka_jumping')
        oneal_stand = dir_filenames('oneal_standing')
        oneal_jump = dir_filenames('oneal_jumping')
-       
+       school_bus = dir_filenames('objects/school_bus')
         
-    image main_char_standing:
+    image male_char_standing:
         xalign .5 yalign .28
 
-        player_stand[0]
+        male_player_stand[0]
         pause .5
-        player_stand[1]
+        male_player_stand[1]
         pause .5
-        player_stand[2]
+        male_player_stand[2]
         pause .5
-        player_stand[3]
+        male_player_stand[3]
         pause .5
-        player_stand[4]
+        male_player_stand[4]
+
+        repeat
+    
+    image female_char_standing:
+        xalign .5 yalign .28
+
+        female_player_stand[0]
+        pause .5
+        female_player_stand[1]
+        pause .5
+        female_player_stand[2]
+        pause .5
+        female_player_stand[3]
+        pause .5
+        female_player_stand[4]
+
+        repeat
+    
+    image female_char_jumping:
+        xalign .5 yalign .46
+        
+        female_player_jump[0]
+        pause 1.5
+        female_player_jump[1]
+        easeout .3 yalign .3
+        easeout .3 yalign.46
 
         repeat
         
@@ -116,12 +129,12 @@ init:
         
         repeat
 
-    image main_char_jumping:
+    image male_char_jumping:
         xalign .5 yalign .46
         
-        player_jump[0]
+        male_player_jump[0]
         pause 1.5
-        player_jump[1]
+        male_player_jump[1]
         easeout .3 yalign .3
         easeout .3 yalign.46
 
@@ -186,4 +199,5 @@ init:
     define e = Character('Eileen', color="#c8ffc8", ctc="nextButton")
     define mainCharacter = Character("[name]", color="#c8ffc8", window_left_padding=160, show_side_image=Image("images/main_character_boy_head.PNG", xalign=0.0,yalign=.85))
     
+   
 jump begin_script
