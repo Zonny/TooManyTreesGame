@@ -2,6 +2,7 @@
 label start:
     call intro
     call dream_scene
+    return
     
 
 label intro:    
