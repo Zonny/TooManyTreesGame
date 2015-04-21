@@ -1,3 +1,4 @@
+
 label intro:    
     scene black with dissolve
     show boy large with dissolve:
@@ -16,9 +17,9 @@ label intro:
         python: 
             name = renpy.input("{cps=20}What is your name?{/cps}")
             name = name.strip()
-            gender = 'male'
             if not name:
                 name = "Kyle"
+        $gender = 'male'
         "{cps=20}Hello, [name]!{/cps}"
         mainCharacter "Testing..."
         jump choice1_done
@@ -27,11 +28,8 @@ label intro:
         python:
             name = renpy.input("{cps=20}What is your name?{/cps}")
             name = name.strip()
-            gender = 'female'
+        $gender = 'female'
         jump choice1_done
         
     label choice1_done:
         return
-
-
-

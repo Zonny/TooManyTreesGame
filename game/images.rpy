@@ -1,4 +1,5 @@
 #Animations for all scenes
+<<<<<<< HEAD
 init -999 python:
     import os
    
@@ -14,9 +15,11 @@ init -999 python:
             
         return result
         
+=======
+>>>>>>> 62ecce02d7d32337a02cce827fc0ed2ddc37d36e
 
         
-init:
+init -998:
     
     image boy = Image("images/boy.PNG")
     image girl = Image("images/girl.PNG")
@@ -25,6 +28,7 @@ init:
     image bg genderChoice = Image("images/startMenuBG.PNG")
     image bg_dream_thoughtcloud = im.Scale('images/backgrounds/dream_thoughtcloud.PNG',width = 800, height= 550, yalign=0.0)
     image bg_basketball = im.Scale('images/backgrounds/basketball.PNG', width = 550, height= 250, yalign=0.2, xalign = .5)
+<<<<<<< HEAD
     #neighbor images
     image bg_neighbor = im.Scale('images/backgrounds/3d-cg-for-visual-novels.jpg',width= 800, height =550, yalign= 0.0)
     image oneal_fallen = im.FactorScale('images/BannedStory_SpriteSheet_oneal_body/cry/frame 0/proneStab_0.png',4.0)
@@ -32,10 +36,15 @@ init:
     image oneal_smile = im.FactorScale('images/BannedStory_SpriteSheet_oneal_body/smile/frame 0/alert_0.png',3.7)
 
     #
+=======
+    #image bg_dream_thoughtcloud = im.FactorScale('images/backgrounds/dream_thoughtcloud.PNG', 1.5)
+>>>>>>> 62ecce02d7d32337a02cce827fc0ed2ddc37d36e
     #Returns a list of string names in a directory with path+nameoffile
     python:
-       player_stand = dir_filenames('player_standing')
-       player_jump = dir_filenames('player_jumping')
+       male_player_stand = dir_filenames('male_player_standing')
+       male_player_jump = dir_filenames('male_player_jumping')
+       female_player_stand = dir_filenames('female_player_standing')
+       female_player_jump = dir_filenames('female_player_jumping')
        estella_stand = dir_filenames('estella_standing')
        estella_jump = dir_filenames('estella_jumping')
        lance_stand = dir_filenames('lance_standing')
@@ -44,20 +53,46 @@ init:
        hiruka_jump = dir_filenames('hiruka_jumping')
        oneal_stand = dir_filenames('oneal_standing')
        oneal_jump = dir_filenames('oneal_jumping')
-       
+       school_bus = dir_filenames('objects/school_bus')
         
-    image main_char_standing:
+    image male_char_standing:
         xalign .5 yalign .28
 
-        player_stand[0]
+        male_player_stand[0]
         pause .5
-        player_stand[1]
+        male_player_stand[1]
         pause .5
-        player_stand[2]
+        male_player_stand[2]
         pause .5
-        player_stand[3]
+        male_player_stand[3]
         pause .5
-        player_stand[4]
+        male_player_stand[4]
+
+        repeat
+    
+    image female_char_standing:
+        xalign .5 yalign .28
+
+        female_player_stand[0]
+        pause .5
+        female_player_stand[1]
+        pause .5
+        female_player_stand[2]
+        pause .5
+        female_player_stand[3]
+        pause .5
+        female_player_stand[4]
+
+        repeat
+    
+    image female_char_jumping:
+        xalign .5 yalign .46
+        
+        female_player_jump[0]
+        pause 1.5
+        female_player_jump[1]
+        easeout .3 yalign .3
+        easeout .3 yalign.46
 
         repeat
         
@@ -122,12 +157,12 @@ init:
         
         repeat
 
-    image main_char_jumping:
+    image male_char_jumping:
         xalign .5 yalign .46
         
-        player_jump[0]
+        male_player_jump[0]
         pause 1.5
-        player_jump[1]
+        male_player_jump[1]
         easeout .3 yalign .3
         easeout .3 yalign.46
 
@@ -192,4 +227,5 @@ init:
     define e = Character('Eileen', color="#c8ffc8", ctc="nextButton")
     define mainCharacter = Character("[name]", color="#c8ffc8", window_left_padding=160, show_side_image=Image("images/main_character_boy_head.PNG", xalign=0.0,yalign=.85))
     
+   
 jump begin_script

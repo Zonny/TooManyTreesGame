@@ -1,15 +1,24 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
+<<<<<<< HEAD
   File "game/main_avatar_images.rpy", line 12, in script
     python:
   File "game/main_avatar_images.rpy", line 13, in <module>
     a_oneal_blink = dir_filenames('a_oneal_blink')
 NameError: name 'dir_filenames' is not defined
+=======
+  File "game/script.rpy", line 21, in script call
+    call dream_scene
+  File "game/script.rpy", line 72, in script
+    show main_char_standing
+Exception: Switch could not choose a displayable.
+>>>>>>> 62ecce02d7d32337a02cce827fc0ed2ddc37d36e
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
+<<<<<<< HEAD
   File "game/main_avatar_images.rpy", line 12, in script
     python:
   File "/Users/dannyortega13/Downloads/renpy-6.99.1-sdk/renpy/ast.py", line 785, in execute
@@ -19,6 +28,37 @@ Full traceback:
   File "game/main_avatar_images.rpy", line 13, in <module>
     a_oneal_blink = dir_filenames('a_oneal_blink')
 NameError: name 'dir_filenames' is not defined
+=======
+  File "game/script.rpy", line 21, in script call
+    call dream_scene
+  File "game/script.rpy", line 72, in script
+    show main_char_standing
+  File "C:\Users\Alvin\Downloads\renpy-6.99.1-sdk\renpy\ast.py", line 1040, in execute
+    show_imspec(self.imspec, atl=getattr(self, "atl", None))
+  File "C:\Users\Alvin\Downloads\renpy-6.99.1-sdk\renpy\ast.py", line 1012, in show_imspec
+    atl=atl)
+  File "C:\Users\Alvin\Downloads\renpy-6.99.1-sdk\renpy\exports.py", line 544, in show
+    sls.add(layer, img, key, zorder, behind, at_list=at_list, name=name, atl=atl, default_transform=renpy.config.default_transform, transient=transient)
+  File "C:\Users\Alvin\Downloads\renpy-6.99.1-sdk\renpy\display\core.py", line 847, in add
+    thing._show()
+  File "C:\Users\Alvin\Downloads\renpy-6.99.1-sdk\renpy\display\motion.py", line 913, in _show
+    self.update_state()
+  File "C:\Users\Alvin\Downloads\renpy-6.99.1-sdk\renpy\display\motion.py", line 787, in update_state
+    pos = child.get_placement()
+  File "C:\Users\Alvin\Downloads\renpy-6.99.1-sdk\renpy\display\image.py", line 217, in get_placement
+    return self.target.get_placement()
+  File "C:\Users\Alvin\Downloads\renpy-6.99.1-sdk\renpy\display\layout.py", line 281, in get_placement
+    xpos, ypos, xanchor, yanchor, xoffset, yoffset, subpixel = self.child.get_placement()
+  File "C:\Users\Alvin\Downloads\renpy-6.99.1-sdk\renpy\display\layout.py", line 1125, in get_placement
+    self.update(0, 0)
+  File "C:\Users\Alvin\Downloads\renpy-6.99.1-sdk\renpy\display\layout.py", line 1094, in update
+    child, redraw = self.function(st, at, *self.args, **self.kwargs)
+  File "C:\Users\Alvin\Downloads\renpy-6.99.1-sdk\renpy\display\layout.py", line 1157, in condition_switch_show
+    return condition_switch_pick(switch), None
+  File "C:\Users\Alvin\Downloads\renpy-6.99.1-sdk\renpy\display\layout.py", line 1154, in condition_switch_pick
+    raise Exception("Switch could not choose a displayable.")
+Exception: Switch could not choose a displayable.
+>>>>>>> 62ecce02d7d32337a02cce827fc0ed2ddc37d36e
 
 Darwin-14.1.0-x86_64-i386-64bit
 Ren'Py 6.99.1.329

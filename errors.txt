@@ -2,8 +2,14 @@
 errors listed below, and try again.
 
 
+<<<<<<< HEAD
 File "game/neighbor_scene.rpy", line 25: Line is indented, but the preceding say statement statement does not expect a block. Please check this line's indentation.
     show oneal_blinkng
     ^
+=======
+File "game/script.rpy", line 68: expected python_expression
+    elif:
+        ^
+>>>>>>> 62ecce02d7d32337a02cce827fc0ed2ddc37d36e
 
 Ren'Py Version: Ren'Py 6.99.1.329
