@@ -2,31 +2,8 @@
 errors listed below, and try again.
 
 
-<<<<<<< HEAD
-File "game/script.rpy", line 1: expected statement.
-    <<<<<<< HEAD
-                ^
-
-File "game/script.rpy", line 2: expected statement.
-    ﻿
-     ^
-
-File "game/script.rpy", line 3: expected statement.
-    =======
-          ^
-
-File "game/script.rpy", line 4: expected statement.
-    ﻿
-     ^
-
-File "game/script.rpy", line 52: expected statement.
-    >>>>>>> karenbranch
-                       ^
-=======
-File "game/script.rpy", line 80: invalid syntax
-    def dir_filenames(folder_name:)->[str]:
-                                  ^
-    
->>>>>>> Alvin
+File "game/neighbor_scene.rpy", line 25: Line is indented, but the preceding say statement statement does not expect a block. Please check this line's indentation.
+    show oneal_blinkng
+    ^
 
 Ren'Py Version: Ren'Py 6.99.1.329

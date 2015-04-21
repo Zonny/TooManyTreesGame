@@ -1,0 +1,5 @@
+label neighbor_scene:
+    scene bg_neighbor
+    'What was that?'
+    show oneal_fallen at Position(xpos = 450, ypos=450)
+    return 

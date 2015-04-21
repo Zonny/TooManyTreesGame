@@ -1,5 +1,5 @@
 #Animations for all scenes
-init python:
+init -999 python:
     import os
    
     pregame_path = renpy.list_files()
@@ -25,7 +25,13 @@ init:
     image bg genderChoice = Image("images/startMenuBG.PNG")
     image bg_dream_thoughtcloud = im.Scale('images/backgrounds/dream_thoughtcloud.PNG',width = 800, height= 550, yalign=0.0)
     image bg_basketball = im.Scale('images/backgrounds/basketball.PNG', width = 550, height= 250, yalign=0.2, xalign = .5)
-    
+    #neighbor images
+    image bg_neighbor = im.Scale('images/backgrounds/3d-cg-for-visual-novels.jpg',width= 800, height =550, yalign= 0.0)
+    image oneal_fallen = im.FactorScale('images/BannedStory_SpriteSheet_oneal_body/cry/frame 0/proneStab_0.png',4.0)
+    image oneal_backpack = im.FactorScale('images/BannedStory_greenpack.png', 4.0)
+    image oneal_smile = im.FactorScale('images/BannedStory_SpriteSheet_oneal_body/smile/frame 0/alert_0.png',3.7)
+
+    #
     #Returns a list of string names in a directory with path+nameoffile
     python:
        player_stand = dir_filenames('player_standing')
