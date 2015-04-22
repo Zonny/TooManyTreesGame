@@ -1,19 +1,19 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
-While running game code:
-  File "game/script.rpy", line 21, in script call
-    call dream_scene
-  File "game/script.rpy", line 72, in script
-    show main_char_standing
-Exception: Switch could not choose a displayable.
+Compiling ATL code at game/bus_stop_scene.rpy:35
+  File "game/script.rpy", line 31, in script call
+    call bus_stop_scene
+  File "game/bus_stop_scene.rpy", line 76, in script
+    show bs_estella_standing_smile:
+NameError: name 'bs_estella_stand' is not defined
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 21, in script call
-    call dream_scene
-  File "game/script.rpy", line 72, in script
-    show main_char_standing
+  File "game/script.rpy", line 31, in script call
+    call bus_stop_scene
+  File "game/bus_stop_scene.rpy", line 76, in script
+    show bs_estella_standing_smile:
   File "C:\Users\Alvin\Downloads\renpy-6.99.1-sdk\renpy\ast.py", line 1040, in execute
     show_imspec(self.imspec, atl=getattr(self, "atl", None))
   File "C:\Users\Alvin\Downloads\renpy-6.99.1-sdk\renpy\ast.py", line 1012, in show_imspec
@@ -22,23 +22,30 @@ Full traceback:
     sls.add(layer, img, key, zorder, behind, at_list=at_list, name=name, atl=atl, default_transform=renpy.config.default_transform, transient=transient)
   File "C:\Users\Alvin\Downloads\renpy-6.99.1-sdk\renpy\display\core.py", line 847, in add
     thing._show()
+  File "C:\Users\Alvin\Downloads\renpy-6.99.1-sdk\renpy\display\motion.py", line 929, in _show
+    super(ATLTransform, self)._show()
   File "C:\Users\Alvin\Downloads\renpy-6.99.1-sdk\renpy\display\motion.py", line 913, in _show
     self.update_state()
   File "C:\Users\Alvin\Downloads\renpy-6.99.1-sdk\renpy\display\motion.py", line 787, in update_state
     pos = child.get_placement()
   File "C:\Users\Alvin\Downloads\renpy-6.99.1-sdk\renpy\display\image.py", line 217, in get_placement
     return self.target.get_placement()
-  File "C:\Users\Alvin\Downloads\renpy-6.99.1-sdk\renpy\display\layout.py", line 281, in get_placement
-    xpos, ypos, xanchor, yanchor, xoffset, yoffset, subpixel = self.child.get_placement()
-  File "C:\Users\Alvin\Downloads\renpy-6.99.1-sdk\renpy\display\layout.py", line 1125, in get_placement
-    self.update(0, 0)
-  File "C:\Users\Alvin\Downloads\renpy-6.99.1-sdk\renpy\display\layout.py", line 1094, in update
-    child, redraw = self.function(st, at, *self.args, **self.kwargs)
-  File "C:\Users\Alvin\Downloads\renpy-6.99.1-sdk\renpy\display\layout.py", line 1157, in condition_switch_show
-    return condition_switch_pick(switch), None
-  File "C:\Users\Alvin\Downloads\renpy-6.99.1-sdk\renpy\display\layout.py", line 1154, in condition_switch_pick
-    raise Exception("Switch could not choose a displayable.")
-Exception: Switch could not choose a displayable.
+  File "C:\Users\Alvin\Downloads\renpy-6.99.1-sdk\renpy\display\motion.py", line 855, in get_placement
+    self.update_state()
+  File "C:\Users\Alvin\Downloads\renpy-6.99.1-sdk\renpy\display\motion.py", line 773, in update_state
+    fr = self.function(self, self.st, self.at)
+  File "C:\Users\Alvin\Downloads\renpy-6.99.1-sdk\renpy\atl.py", line 466, in execute
+    block = self.compile()
+  File "C:\Users\Alvin\Downloads\renpy-6.99.1-sdk\renpy\atl.py", line 434, in compile
+    block = self.atl.compile(self.context)
+  File "C:\Users\Alvin\Downloads\renpy-6.99.1-sdk\renpy\atl.py", line 607, in compile
+    statements = [ i.compile(ctx) for i in self.statements ]
+  File "C:\Users\Alvin\Downloads\renpy-6.99.1-sdk\renpy\atl.py", line 810, in compile
+    child = ctx.eval(expr)
+  File "C:\Users\Alvin\Downloads\renpy-6.99.1-sdk\renpy\atl.py", line 212, in eval
+    return eval(expr, renpy.store.__dict__, self.context) #@UndefinedVariable
+  File "<string>", line 1, in <module>
+NameError: name 'bs_estella_stand' is not defined
 
 Windows-8-6.2.9200
 Ren'Py 6.99.1.329
