@@ -13,7 +13,7 @@ define e = Character('Eileen', color="#c8ffc8", ctc="nextButton")
 # The game starts here.
 label start:
     scene black with dissolve
-    image boy large = im.FactorScale("boy.png", 7.0)
+    image boy large = im.FactorScale("boy.png", 4.0)
     image girl large = im.FactorScale("girl.png", 4.0)
     show boy large with dissolve:
         xpos 0.2 ypos 0.15
