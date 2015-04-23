@@ -1,0 +1,21 @@
+﻿I'm sorry, but an uncaught exception occurred.
+
+While running game code:
+  File "game/script.rpy", line 52, in script
+    jump continueStory
+ScriptError: could not find label 'continueStory'.
+
+-- Full Traceback ------------------------------------------------------------
+
+Full traceback:
+  File "game/script.rpy", line 52, in script
+    jump continueStory
+  File "C:\Users\Karen\renpy-6.99.1-sdk\renpy\ast.py", line 1480, in execute
+    rv = renpy.game.script.lookup(target)
+  File "C:\Users\Karen\renpy-6.99.1-sdk\renpy\script.py", line 602, in lookup
+    raise ScriptError("could not find label '%s'." % str(original))
+ScriptError: could not find label 'continueStory'.
+
+Windows-7-6.1.7601-SP1
+Ren'Py 6.99.1.329
+scene1 0.0
