@@ -2,9 +2,8 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 13: invalid syntax
-            if folder_name in name_list and (filename.lower().find('.png'))):
-                                                                            ^
-    
+File "game/bus_stop_scene.rpy", line 71: expected 'comma or end of line' not found.
+    image bs_oneal_standing_norm:
+    ^
 
 Ren'Py Version: Ren'Py 6.99.1.329

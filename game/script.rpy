@@ -26,7 +26,7 @@ init -999 python:
         return result
 
 label start:
-    #call intro
+    call intro
     #call dream_scene
     call bus_stop_scene
     return

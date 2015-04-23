@@ -1,19 +1,19 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
-Compiling ATL code at game/bus_stop_scene.rpy:35
+Compiling ATL code at game/bus_stop_scene.rpy:136
   File "game/script.rpy", line 31, in script call
     call bus_stop_scene
-  File "game/bus_stop_scene.rpy", line 76, in script
-    show bs_estella_standing_smile:
-NameError: name 'bs_estella_stand' is not defined
+  File "game/bus_stop_scene.rpy", line 191, in script
+    show bs_oneal_standing_smile:
+IndexError: list index out of range
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
   File "game/script.rpy", line 31, in script call
     call bus_stop_scene
-  File "game/bus_stop_scene.rpy", line 76, in script
-    show bs_estella_standing_smile:
+  File "game/bus_stop_scene.rpy", line 191, in script
+    show bs_oneal_standing_smile:
   File "C:\Users\Alvin\Downloads\renpy-6.99.1-sdk\renpy\ast.py", line 1040, in execute
     show_imspec(self.imspec, atl=getattr(self, "atl", None))
   File "C:\Users\Alvin\Downloads\renpy-6.99.1-sdk\renpy\ast.py", line 1012, in show_imspec
@@ -45,7 +45,7 @@ Full traceback:
   File "C:\Users\Alvin\Downloads\renpy-6.99.1-sdk\renpy\atl.py", line 212, in eval
     return eval(expr, renpy.store.__dict__, self.context) #@UndefinedVariable
   File "<string>", line 1, in <module>
-NameError: name 'bs_estella_stand' is not defined
+IndexError: list index out of range
 
 Windows-8-6.2.9200
 Ren'Py 6.99.1.329
