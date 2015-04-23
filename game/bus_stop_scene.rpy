@@ -41,7 +41,7 @@ init:
         pause .25
         repeat
 
-    image bs_oneal_walk_norm:
+    image bs_oneal_walking_norm:
         bs_oneal_walk_norm[0]
         pause .25
         bs_oneal_walk_norm[1]
@@ -67,6 +67,8 @@ init:
         bs_oneal_walk_smile[3]
         pause .25
         repeat
+    
+    image bs_main_
         
 label bus_stop_scene:
     show bg_bus_stop_scene
@@ -74,14 +76,14 @@ label bus_stop_scene:
         xalign .32 yalign .60
 
     "It is a beautiful day today!"
-    "Estella is waiting for the bus to arrive"
+    "Estella is waiting for the bus to arrive."
     
-    show bs_oneal_walk_norm:
+    show bs_oneal_walking_norm:
         xalign 1.2 yalign .60
         linear 8 xalign .5
         bs_oneal_stand_norm[0]
     
-    "You and Oneal are walking towards the bus stop"
+    "You and Oneal are walking towards the bus stop."
     "** Talking **"
     show bs_school_bus_moving:
         xalign 1 yalign .57
