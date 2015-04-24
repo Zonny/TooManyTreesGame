@@ -1,11 +1,11 @@
-Mon Apr 20 18:16:14 2015
+Thu Apr 23 21:08:07 2015
 Darwin-14.1.0-x86_64-i386-64bit
 Ren'Py 6.99.1.329
 test 0.0
 
 
 Windowed mode.
-Screen sizes: virtual=(800, 600) physical=(800, 600)
+Screen sizes: virtual=(800, 600) physical=(1064, 798)
 Vendor: 'Intel Inc.'
 Renderer: 'Intel HD Graphics 5000 OpenGL Engine'
 Version: '2.1 INTEL-10.2.46'
@@ -155,8 +155,8 @@ Texture testing:
 Performance test:
 - Target is 5 frames in 0.333333333333 seconds.
 - Frame drawn at 0.000000 seconds.
-- Frame drawn at 0.020030 seconds.
-- Frame drawn at 0.030115 seconds.
-- Frame drawn at 0.048171 seconds.
-- Frame drawn at 0.065476 seconds.
-- 0.065476 seconds to render 5 frames.
+- Frame drawn at 0.016248 seconds.
+- Frame drawn at 0.030361 seconds.
+- Frame drawn at 0.047395 seconds.
+- Frame drawn at 0.063850 seconds.
+- 0.063850 seconds to render 5 frames.

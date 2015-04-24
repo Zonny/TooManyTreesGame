@@ -10,19 +10,32 @@ init -999 python:
         result = []
         for filename in pregame_path:
             name_list = filename.split('/')
-            if folder_name in name_list:
+            if folder_name in name_list and (filename.lower().find('.png') != -1):
                 result.append(filename)
             
         return result
         
+    def FactorScaleAll(image_list, scale):
+        '''
+        Returns a scaled the list of images using FactorScale with specified size for animation purposes
+        '''
+        result = []
+        for i in range(len(image_list)):
+            result.append(im.FactorScale(image_list[i], scale))
+        
+        return result
 
 label start:
     call intro
     
     call dream_scene
     
-    call neighbor_scene
   #  call main_avatar_images
+
+    call wake_up_scene
+    call neighbor_scene
+    call bus_stop_scene
+    call school_scene
     return
 
 

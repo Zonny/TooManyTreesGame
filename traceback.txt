@@ -1,5 +1,6 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
+<<<<<<< HEAD
 While running game code:
 <<<<<<< HEAD
   File "game/main_avatar_images.rpy", line 12, in script
@@ -14,10 +15,19 @@ NameError: name 'dir_filenames' is not defined
     show main_char_standing
 Exception: Switch could not choose a displayable.
 >>>>>>> 62ecce02d7d32337a02cce827fc0ed2ddc37d36e
+=======
+Compiling ATL code at game/main_avatar_images.rpy:26
+  File "game/script.rpy", line 32, in script call
+    call neighbor_scene
+  File "game/neighbor_scene.rpy", line 13, in script
+    c_male_blinking '...ow...'
+IndexError: list index out of range
+>>>>>>> 6554b2d17fb63b56eaf015db6880066997ce2d84
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
+<<<<<<< HEAD
 <<<<<<< HEAD
   File "game/main_avatar_images.rpy", line 12, in script
     python:
@@ -59,6 +69,48 @@ NameError: name 'dir_filenames' is not defined
     raise Exception("Switch could not choose a displayable.")
 Exception: Switch could not choose a displayable.
 >>>>>>> 62ecce02d7d32337a02cce827fc0ed2ddc37d36e
+=======
+  File "game/script.rpy", line 32, in script call
+    call neighbor_scene
+  File "game/neighbor_scene.rpy", line 13, in script
+    c_male_blinking '...ow...'
+  File "C:\msysgit\renpy-6.99.1-sdk\renpy\ast.py", line 593, in execute
+    renpy.exports.say(who, what, interact=self.interact)
+  File "C:\msysgit\renpy-6.99.1-sdk\renpy\exports.py", line 1033, in say
+    who(what, interact=interact)
+  File "C:\msysgit\renpy-6.99.1-sdk\renpy\character.py", line 826, in __call__
+    self.do_display(who, what, cb_args=self.cb_args, **display_args)
+  File "C:\msysgit\renpy-6.99.1-sdk\renpy\character.py", line 688, in do_display
+    **display_args)
+  File "C:\msysgit\renpy-6.99.1-sdk\renpy\character.py", line 491, in display_say
+    rv = renpy.ui.interact(mouse='say', type=type, roll_forward=roll_forward)
+  File "C:\msysgit\renpy-6.99.1-sdk\renpy\ui.py", line 247, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "C:\msysgit\renpy-6.99.1-sdk\renpy\display\core.py", line 2254, in interact
+    scene_lists.replace_transient()
+  File "C:\msysgit\renpy-6.99.1-sdk\renpy\display\core.py", line 672, in replace_transient
+    self.remove(layer, tag)
+  File "C:\msysgit\renpy-6.99.1-sdk\renpy\display\core.py", line 954, in remove
+    self.hide_or_replace(layer, remove_index, "hide")
+  File "C:\msysgit\renpy-6.99.1-sdk\renpy\display\core.py", line 878, in hide_or_replace
+    d = oldsle.displayable._hide(now - st, now - at, prefix)
+  File "C:\msysgit\renpy-6.99.1-sdk\renpy\display\screen.py", line 454, in _hide
+    c = d._hide(st, at, kind)
+  File "C:\msysgit\renpy-6.99.1-sdk\renpy\display\motion.py", line 733, in _hide
+    d.function(d, st + d.st_offset, at + d.at_offset)
+  File "C:\msysgit\renpy-6.99.1-sdk\renpy\atl.py", line 466, in execute
+    block = self.compile()
+  File "C:\msysgit\renpy-6.99.1-sdk\renpy\atl.py", line 434, in compile
+    block = self.atl.compile(self.context)
+  File "C:\msysgit\renpy-6.99.1-sdk\renpy\atl.py", line 607, in compile
+    statements = [ i.compile(ctx) for i in self.statements ]
+  File "C:\msysgit\renpy-6.99.1-sdk\renpy\atl.py", line 810, in compile
+    child = ctx.eval(expr)
+  File "C:\msysgit\renpy-6.99.1-sdk\renpy\atl.py", line 212, in eval
+    return eval(expr, renpy.store.__dict__, self.context) #@UndefinedVariable
+  File "<string>", line 1, in <module>
+IndexError: list index out of range
+>>>>>>> 6554b2d17fb63b56eaf015db6880066997ce2d84
 
 Darwin-14.1.0-x86_64-i386-64bit
 Ren'Py 6.99.1.329

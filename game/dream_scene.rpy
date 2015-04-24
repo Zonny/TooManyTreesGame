@@ -1,13 +1,11 @@
 label dream_scene:
-<<<<<<< HEAD
     scene bg_dream_thoughtcloud
-=======
     image main_char_standing = ConditionSwitch("gender == 'male'", "male_char_standing",
                                         "gender == 'female'", "female_char_standing")
     image main_char_jumping = ConditionSwitch("gender == 'male'", "male_char_jumping",
                                         "gender == 'female'", "female_char_jumping")
     show bg_dream_thoughtcloud
->>>>>>> 62ecce02d7d32337a02cce827fc0ed2ddc37d36e
+
     show bg_basketball
     label dream_scene_sad:
         show main_char_standing
@@ -31,7 +29,6 @@ label dream_scene:
             "Surpise":
                 jump dream_scene_sad
     
-<<<<<<< HEAD
     hide mainavatar_normal
     inner_t_cry "I.. need.. teammates.zzzZZ"
     
@@ -70,23 +67,22 @@ label dream_scene:
     inner_t_smile "I FOUND TEAMMATES! COOOL!!"
     
     return
-=======
->>>>>>> 62ecce02d7d32337a02cce827fc0ed2ddc37d36e
+
     
         
-        show oneal_standing:
-            alpha 0
-            linear 1 alpha 1.0
-        show estella_standing:
-            alpha 0
-            linear .5 alpha 1.0
-        show lance_standing:
-            alpha 0
-            linear .6 alpha 1.0
-        show hiruka_standing:
-            alpha 0
-            linear .8 alpha 1.0
-        inner_t_cry "zz..ZZZ"
+    show oneal_standing:
+        alpha 0
+        linear 1 alpha 1.0
+    show estella_standing:
+        alpha 0
+        linear .5 alpha 1.0
+    show lance_standing:
+        alpha 0
+        linear .6 alpha 1.0
+    show hiruka_standing:
+        alpha 0
+        linear .8 alpha 1.0
+    inner_t_cry "zz..ZZZ"
 
     label dream_scene_happy:
         show main_char_standing:
