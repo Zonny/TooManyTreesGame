@@ -1,7 +1,6 @@
 # The game starts here.
 init -999 python:
     import os
-   
     pregame_path = renpy.list_files()
     def dir_filenames(folder_name):
         '''
@@ -26,6 +25,8 @@ init -999 python:
         return result
 
 label start:
+    play music "AboveTheTreetops.ogg"
+
     call intro
     
     call dream_scene
@@ -36,6 +37,7 @@ label start:
     call neighbor_scene
     call bus_stop_scene
     call school_scene
+    call credits
     return
 
 

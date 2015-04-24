@@ -1,4 +1,7 @@
+define bg_thoughtcloud = ImageDissolve("bg_dream_thoughtcloud", 1.0)
 label dream_scene:
+    show black with Dissolve(.5)
+    show episode1 with Dissolve(5)
     show bg_dream_thoughtcloud
     image main_char_standing = ConditionSwitch("gender == 'male'", "male_char_standing",
                                         "gender == 'female'", "female_char_standing")
@@ -20,17 +23,17 @@ label dream_scene:
                 
             "Happy":
                 narrator_incorrect "Your character does not look happy right now."
-                narrator_incorrect "Choose again."
+                narrator_incorrect "How about you try again?."
                 jump dream_scene_sad
             
             "Angry":
                 narrator_incorrect "If you cannot find teammates you should not be angry!"
-                narrator_incorrect "Choose again."
+                narrator_incorrect "How about you try again?."
                 jump dream_scene_sad
                 
             "Surpise":
                 narrator_incorrect "Your character does not look too surprised."
-                narrator_incorrect "Choose again."
+                narrator_incorrect "How about you try again?"
                 jump dream_scene_sad
               
         show oneal_standing:

@@ -2,8 +2,8 @@
 errors listed below, and try again.
 
 
-File "game/main_avatar_images.rpy", line 192: is not terminated with a newline. (Check strings and parenthesis.)
-(Perhaps you left out a ' at the end of the first line.)
-    >>>>>>> Alvin's scene done. Just need to fix sentences
+File "game/credit_scene.rpy", line 2: expected 'name' not found.
+    hide screen
+               ^
 
 Ren'Py Version: Ren'Py 6.99.1.329

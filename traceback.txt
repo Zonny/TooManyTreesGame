@@ -1,138 +1,85 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-While running game code:
-<<<<<<< HEAD
-  File "game/main_avatar_images.rpy", line 12, in script
-    python:
-  File "game/main_avatar_images.rpy", line 13, in <module>
-    a_oneal_blink = dir_filenames('a_oneal_blink')
-NameError: name 'dir_filenames' is not defined
-=======
-  File "game/script.rpy", line 21, in script call
-    call dream_scene
-  File "game/script.rpy", line 72, in script
-    show main_char_standing
-Exception: Switch could not choose a displayable.
->>>>>>> 62ecce02d7d32337a02cce827fc0ed2ddc37d36e
-=======
-Compiling ATL code at game/main_avatar_images.rpy:26
-  File "game/script.rpy", line 32, in script call
-    call neighbor_scene
-  File "game/neighbor_scene.rpy", line 13, in script
-    c_male_blinking '...ow...'
-IndexError: list index out of range
->>>>>>> 6554b2d17fb63b56eaf015db6880066997ce2d84
-=======
-While running game code:
-  File "game/script.rpy", line 29, in script call
-    call intro
-  File "game/intro_scene.rpy", line 24, in script
-    mainCharacter "Testing..."
-Exception: Sayer 'mainCharacter' is not defined.
->>>>>>> Alvin's scene done. Just need to fix sentences
+While loading <'Scale' <'Image' 'images/credits/Credits2.png'> 800 600 True>:
+  File "game/script.rpy", line 40, in script call
+    call credit_scene
+  File "game/credit_scene.rpy", line 12, in script
+    $renpy.pause(4, hard=True)
+  File "game/credit_scene.rpy", line 12, in <module>
+    $renpy.pause(4, hard=True)
+IOError: Couldn't find file 'images/credits/Credits2.png'.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-  File "game/main_avatar_images.rpy", line 12, in script
-    python:
-  File "/Users/dannyortega13/Downloads/renpy-6.99.1-sdk/renpy/ast.py", line 785, in execute
+  File "game/script.rpy", line 40, in script call
+    call credit_scene
+  File "game/credit_scene.rpy", line 12, in script
+    $renpy.pause(4, hard=True)
+  File "C:\Users\Karen\renpy-6.99.1-sdk\renpy\ast.py", line 785, in execute
     renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
-  File "/Users/dannyortega13/Downloads/renpy-6.99.1-sdk/renpy/python.py", line 1432, in py_exec_bytecode
+  File "C:\Users\Karen\renpy-6.99.1-sdk\renpy\python.py", line 1432, in py_exec_bytecode
     exec bytecode in globals, locals
-  File "game/main_avatar_images.rpy", line 13, in <module>
-    a_oneal_blink = dir_filenames('a_oneal_blink')
-NameError: name 'dir_filenames' is not defined
-=======
-  File "game/script.rpy", line 21, in script call
-    call dream_scene
-  File "game/script.rpy", line 72, in script
-    show main_char_standing
-  File "C:\Users\Alvin\Downloads\renpy-6.99.1-sdk\renpy\ast.py", line 1040, in execute
-    show_imspec(self.imspec, atl=getattr(self, "atl", None))
-  File "C:\Users\Alvin\Downloads\renpy-6.99.1-sdk\renpy\ast.py", line 1012, in show_imspec
-    atl=atl)
-  File "C:\Users\Alvin\Downloads\renpy-6.99.1-sdk\renpy\exports.py", line 544, in show
-    sls.add(layer, img, key, zorder, behind, at_list=at_list, name=name, atl=atl, default_transform=renpy.config.default_transform, transient=transient)
-  File "C:\Users\Alvin\Downloads\renpy-6.99.1-sdk\renpy\display\core.py", line 847, in add
-    thing._show()
-  File "C:\Users\Alvin\Downloads\renpy-6.99.1-sdk\renpy\display\motion.py", line 913, in _show
-    self.update_state()
-  File "C:\Users\Alvin\Downloads\renpy-6.99.1-sdk\renpy\display\motion.py", line 787, in update_state
-    pos = child.get_placement()
-  File "C:\Users\Alvin\Downloads\renpy-6.99.1-sdk\renpy\display\image.py", line 217, in get_placement
-    return self.target.get_placement()
-  File "C:\Users\Alvin\Downloads\renpy-6.99.1-sdk\renpy\display\layout.py", line 281, in get_placement
-    xpos, ypos, xanchor, yanchor, xoffset, yoffset, subpixel = self.child.get_placement()
-  File "C:\Users\Alvin\Downloads\renpy-6.99.1-sdk\renpy\display\layout.py", line 1125, in get_placement
-    self.update(0, 0)
-  File "C:\Users\Alvin\Downloads\renpy-6.99.1-sdk\renpy\display\layout.py", line 1094, in update
-    child, redraw = self.function(st, at, *self.args, **self.kwargs)
-  File "C:\Users\Alvin\Downloads\renpy-6.99.1-sdk\renpy\display\layout.py", line 1157, in condition_switch_show
-    return condition_switch_pick(switch), None
-  File "C:\Users\Alvin\Downloads\renpy-6.99.1-sdk\renpy\display\layout.py", line 1154, in condition_switch_pick
-    raise Exception("Switch could not choose a displayable.")
-Exception: Switch could not choose a displayable.
->>>>>>> 62ecce02d7d32337a02cce827fc0ed2ddc37d36e
-=======
-  File "game/script.rpy", line 32, in script call
-    call neighbor_scene
-  File "game/neighbor_scene.rpy", line 13, in script
-    c_male_blinking '...ow...'
-  File "C:\msysgit\renpy-6.99.1-sdk\renpy\ast.py", line 593, in execute
-    renpy.exports.say(who, what, interact=self.interact)
-  File "C:\msysgit\renpy-6.99.1-sdk\renpy\exports.py", line 1033, in say
-    who(what, interact=interact)
-  File "C:\msysgit\renpy-6.99.1-sdk\renpy\character.py", line 826, in __call__
-    self.do_display(who, what, cb_args=self.cb_args, **display_args)
-  File "C:\msysgit\renpy-6.99.1-sdk\renpy\character.py", line 688, in do_display
-    **display_args)
-  File "C:\msysgit\renpy-6.99.1-sdk\renpy\character.py", line 491, in display_say
-    rv = renpy.ui.interact(mouse='say', type=type, roll_forward=roll_forward)
-  File "C:\msysgit\renpy-6.99.1-sdk\renpy\ui.py", line 247, in interact
+  File "game/credit_scene.rpy", line 12, in <module>
+    $renpy.pause(4, hard=True)
+  File "C:\Users\Karen\renpy-6.99.1-sdk\renpy\exports.py", line 1160, in pause
+    rv = renpy.ui.interact(mouse='pause', type='pause', roll_forward=roll_forward)
+  File "C:\Users\Karen\renpy-6.99.1-sdk\renpy\ui.py", line 247, in interact
     rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
-  File "C:\msysgit\renpy-6.99.1-sdk\renpy\display\core.py", line 2254, in interact
-    scene_lists.replace_transient()
-  File "C:\msysgit\renpy-6.99.1-sdk\renpy\display\core.py", line 672, in replace_transient
-    self.remove(layer, tag)
-  File "C:\msysgit\renpy-6.99.1-sdk\renpy\display\core.py", line 954, in remove
-    self.hide_or_replace(layer, remove_index, "hide")
-  File "C:\msysgit\renpy-6.99.1-sdk\renpy\display\core.py", line 878, in hide_or_replace
-    d = oldsle.displayable._hide(now - st, now - at, prefix)
-  File "C:\msysgit\renpy-6.99.1-sdk\renpy\display\screen.py", line 454, in _hide
-    c = d._hide(st, at, kind)
-  File "C:\msysgit\renpy-6.99.1-sdk\renpy\display\motion.py", line 733, in _hide
-    d.function(d, st + d.st_offset, at + d.at_offset)
-  File "C:\msysgit\renpy-6.99.1-sdk\renpy\atl.py", line 466, in execute
-    block = self.compile()
-  File "C:\msysgit\renpy-6.99.1-sdk\renpy\atl.py", line 434, in compile
-    block = self.atl.compile(self.context)
-  File "C:\msysgit\renpy-6.99.1-sdk\renpy\atl.py", line 607, in compile
-    statements = [ i.compile(ctx) for i in self.statements ]
-  File "C:\msysgit\renpy-6.99.1-sdk\renpy\atl.py", line 810, in compile
-    child = ctx.eval(expr)
-  File "C:\msysgit\renpy-6.99.1-sdk\renpy\atl.py", line 212, in eval
-    return eval(expr, renpy.store.__dict__, self.context) #@UndefinedVariable
-  File "<string>", line 1, in <module>
-IndexError: list index out of range
->>>>>>> 6554b2d17fb63b56eaf015db6880066997ce2d84
-=======
-  File "game/script.rpy", line 29, in script call
-    call intro
-  File "game/intro_scene.rpy", line 24, in script
-    mainCharacter "Testing..."
-  File "C:\Users\Alvin\Downloads\renpy-6.99.1-sdk\renpy\ast.py", line 573, in execute
-    who = eval_who(self.who, self.who_fast)
-  File "C:\Users\Alvin\Downloads\renpy-6.99.1-sdk\renpy\ast.py", line 491, in eval_who
-    raise Exception("Sayer '%s' is not defined." % who.encode("utf-8"))
-Exception: Sayer 'mainCharacter' is not defined.
->>>>>>> Alvin's scene done. Just need to fix sentences
+  File "C:\Users\Karen\renpy-6.99.1-sdk\renpy\display\core.py", line 2243, in interact
+    repeat, rv = self.interact_core(preloads=preloads, **kwargs)
+  File "C:\Users\Karen\renpy-6.99.1-sdk\renpy\display\core.py", line 2572, in interact_core
+    self.draw_screen(root_widget, fullscreen_video, (not fullscreen_video) or video_frame_drawn)
+  File "C:\Users\Karen\renpy-6.99.1-sdk\renpy\display\core.py", line 1694, in draw_screen
+    renpy.config.screen_height,
+  File "renpy/display/render.pyx", line 364, in renpy.display.render.render_screen (gen\renpy.display.render.c:5734)
+    rv = render(root, width, height, 0, 0)
+  File "renpy/display/render.pyx", line 175, in renpy.display.render.render (gen\renpy.display.render.c:2600)
+    rv = d.render(widtho, heighto, st, at)
+  File "C:\Users\Karen\renpy-6.99.1-sdk\renpy\display\layout.py", line 629, in render
+    surf = render(child, width, height, cst, cat)
+  File "renpy/display/render.pyx", line 99, in renpy.display.render.render (gen\renpy.display.render.c:2921)
+    cpdef render(d, object widtho, object heighto, double st, double at):
+  File "renpy/display/render.pyx", line 175, in renpy.display.render.render (gen\renpy.display.render.c:2600)
+    rv = d.render(widtho, heighto, st, at)
+  File "C:\Users\Karen\renpy-6.99.1-sdk\renpy\display\layout.py", line 629, in render
+    surf = render(child, width, height, cst, cat)
+  File "renpy/display/render.pyx", line 99, in renpy.display.render.render (gen\renpy.display.render.c:2921)
+    cpdef render(d, object widtho, object heighto, double st, double at):
+  File "renpy/display/render.pyx", line 175, in renpy.display.render.render (gen\renpy.display.render.c:2600)
+    rv = d.render(widtho, heighto, st, at)
+  File "C:\Users\Karen\renpy-6.99.1-sdk\renpy\display\layout.py", line 629, in render
+    surf = render(child, width, height, cst, cat)
+  File "renpy/display/render.pyx", line 99, in renpy.display.render.render (gen\renpy.display.render.c:2921)
+    cpdef render(d, object widtho, object heighto, double st, double at):
+  File "renpy/display/render.pyx", line 175, in renpy.display.render.render (gen\renpy.display.render.c:2600)
+    rv = d.render(widtho, heighto, st, at)
+  File "renpy/display/accelerator.pyx", line 104, in renpy.display.accelerator.transform_render (gen\renpy.display.accelerator.c:1876)
+    cr = render(child, widtho, heighto, st - self.child_st_base, at)
+  File "renpy/display/render.pyx", line 175, in renpy.display.render.render (gen\renpy.display.render.c:2600)
+    rv = d.render(widtho, heighto, st, at)
+  File "C:\Users\Karen\renpy-6.99.1-sdk\renpy\display\image.py", line 210, in render
+    return wrap_render(self.target, width, height, st, at)
+  File "C:\Users\Karen\renpy-6.99.1-sdk\renpy\display\image.py", line 82, in wrap_render
+    rend = render(child, w, h, st, at)
+  File "renpy/display/render.pyx", line 99, in renpy.display.render.render (gen\renpy.display.render.c:2921)
+    cpdef render(d, object widtho, object heighto, double st, double at):
+  File "renpy/display/render.pyx", line 175, in renpy.display.render.render (gen\renpy.display.render.c:2600)
+    rv = d.render(widtho, heighto, st, at)
+  File "C:\Users\Karen\renpy-6.99.1-sdk\renpy\display\im.py", line 478, in render
+    im = cache.get(self)
+  File "C:\Users\Karen\renpy-6.99.1-sdk\renpy\display\im.py", line 200, in get
+    surf = image.load()
+  File "C:\Users\Karen\renpy-6.99.1-sdk\renpy\display\im.py", line 681, in load
+    child = cache.get(self.image)
+  File "C:\Users\Karen\renpy-6.99.1-sdk\renpy\display\im.py", line 200, in get
+    surf = image.load()
+  File "C:\Users\Karen\renpy-6.99.1-sdk\renpy\display\im.py", line 529, in load
+    surf = renpy.display.pgrender.load_image(renpy.loader.load(self.filename), self.filename)
+  File "C:\Users\Karen\renpy-6.99.1-sdk\renpy\loader.py", line 450, in load
+    raise IOError("Couldn't find file '%s'." % name)
+IOError: Couldn't find file 'images/credits/Credits2.png'.
 
-Darwin-14.1.0-x86_64-i386-64bit
+Windows-7-6.1.7601-SP1
 Ren'Py 6.99.1.329
- 
+test 0.0

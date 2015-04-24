@@ -5,9 +5,10 @@
 
 # Declare characters used by this game.
 init:
-    define e = Character('Eileen', color="#c8ffc8")
-    image main_character_head = im.Scale("images/main_character_boy_head.png", 125, 125, xalign = .02, yalign = .95)
-    define main = Character("AJKLF:JSKFLSDJ", color="#c8ffc8", window_left_padding=160, show_side_image='main_character_head')
+    define c_main_blinking = Character('[name]', window_left_padding = 160, show_side_image=ConditionSwitch("gender == 'male'", 'male_blinking', "gender=='female'", 'female_blinking'), xalign = 0, yalign = 1.0)
+    define c_main_smiling = Character('[name]', window_left_padding = 160, show_side_image=ConditionSwitch("gender == 'male'", 'male_smiling', "gender=='female'", 'female_smiling'), xalign = 0, yalign = 1.0)
+    #image main_character_head = im.Scale("images/main_character_boy_head.png", 125, 125, xalign = .02, yalign = .95)
+    #define main = Character("AJKLF:JSKFLSDJ", color="#c8ffc8", window_left_padding=160, show_side_image='main_character_head')
     image bg bedroom = im.FactorScale("images/bedroom.png", 2.5)
     image bg clock = im.FactorScale("images/clock.png", 2.5)
     image blink eye1 = im.FactorScale("images/blinkingEye1.png",2.0)
@@ -27,7 +28,7 @@ label wake_up_scene:
     window show
     show blink eye1
     pause 1.0
-    main "ZZZzzzz..."
+    c_main_blinking "ZZZzzzz..."
     scene bg bedroom
     show blink eye2
     pause .25
@@ -46,11 +47,11 @@ label wake_up_scene:
     show blink eye3
     pause .1
     hide blink eye3
-    main "I'm so tired..."
+    c_main_blinking "I'm so tired... What a weird dream..."
     show bg bedroom
-    main "What time is it..?"
+    c_main_blinking "What time is it..?"
     show bg clock
-    main "It's 7 o'clock."
+    c_main_blinking "Oh! It's 7 o'clock."
     
     menu:
         "I should get ready for school.":
@@ -59,10 +60,10 @@ label wake_up_scene:
             jump choice2_bad
     
     label choice2_good:
-        main "Yea, I should probably get ready for school."
+        narrator_correct "Yea, you're right. You should probably get ready for school."
         return
     label choice2_bad:
-        main "Sleeping more seems like a bad idea. I might be late for school."
+        narrator_incorrect "Sleeping more seems like a bad idea. You might be late for school."
         jump loopBack
         
     

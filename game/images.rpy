@@ -18,7 +18,7 @@ init -999 python:
 
         
 init -998:
-    
+    image episode1 = Image("images/Episode1.PNG")
     image boy = Image("images/boy.PNG")
     image girl = Image("images/girl.PNG")
     image black = "#000"

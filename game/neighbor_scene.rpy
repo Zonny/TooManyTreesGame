@@ -1,7 +1,6 @@
 label neighbor_scene:
 
-    $b = 'oneal'
-
+    $b = 'Oneal'
     image black = "#000000"
     show black with vpunch
     show black with hpunch
@@ -20,12 +19,12 @@ label help:
         menu:
             'Looks like he needs help!':
 
-                narrator_correct '*you help oneal up*'
+                narrator_correct '*You help Oneal up*'
                 narrator_correct 'Good job!'
                 jump happy
             'Ignore':
                 narrator_incorrect 'He really needs help!'
-                narrator_incorrect "Choose again."
+                narrator_incorrect "How about we try something different?."
                 jump help
                 
         return 
@@ -36,7 +35,7 @@ label happy:
     
     show bg_neighbor
     show oneal_smile at Position(xpos = 500, ypos =400)
-    c_oneal_smiling 'Thank you for helping me friend!'
+    c_oneal_smiling 'Thank you for helping me, friend!'
     
     
 

@@ -44,8 +44,7 @@ label school_scene:
         yalign .61
         easeout 3 xalign -.5
     pause 3
-    
-    "Test"
+  
         
     
     

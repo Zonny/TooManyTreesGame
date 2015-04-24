@@ -1,10 +1,13 @@
 
 label intro:    
     scene black with dissolve
+    define c_main_blinking = Character('[name]', window_left_padding = 160, show_side_image=ConditionSwitch("gender == 'male'", 'male_blinking', "gender=='female'", 'female_blinking'), xalign = 0, yalign = 1.0)
 
     show coach_blink_norm at truecenter with dissolve
         
-    'Input Coach Text Here'
+    "Hey! You're here. I was thinking of having a basketball competition."
+    "How about you create a team and join us?"
+    "But first, tell us about yourself."
 
     hide coach_blink_norm
 
@@ -25,10 +28,9 @@ label intro:
             name = renpy.input("{cps=20}What is your name?{/cps}")
             name = name.strip()
             if not name:
-                name = "Kyle"
+                name = "Anon"
         $gender = 'male'
         "{cps=20}Hello, [name]!{/cps}"
-        #mainCharacter "Testing..."
         jump choice1_done
         
     label choice1_girl:
@@ -42,5 +44,5 @@ label intro:
         define c_main_blinking = Character('[name]', window_left_padding = 160, show_side_image=ConditionSwitch("gender == 'male'", 'male_blinking', "gender=='female'", 'female_blinking'), xalign = 0, yalign = 1.0)
         define c_main_smiling = Character('[name]', window_left_padding = 160, show_side_image=ConditionSwitch("gender == 'male'", 'male_smiling', "gender=='female'", 'female_smiling'), xalign = 0, yalign = 1.0)
         define c_main_crying = Character('[name]', window_left_padding = 160, show_side_image=ConditionSwitch("gender == 'male'", 'male_crying', "gender=='female'", 'female_crying'), xalign = 0, yalign = 1.0)
-
+        scene black with dissolve
         return
