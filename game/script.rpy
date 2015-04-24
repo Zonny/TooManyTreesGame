@@ -27,7 +27,11 @@ init -999 python:
 
 label start:
     call intro
+    
     call dream_scene
+    
+  #  call main_avatar_images
+
     call wake_up_scene
     call neighbor_scene
     call bus_stop_scene
