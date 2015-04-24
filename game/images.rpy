@@ -225,19 +225,16 @@ init -998:
 
         repeat
     
-    image mainavatar_smile = im.Scale(Image("images/avatars/main/smile.png"), 125, 125, xalign = .02, yalign = .95)
-    image mainavatar_cry = im.Scale(Image("images/avatars/main/cry.png"),125, 125, xalign = .02, yalign = .95)
-    image mainavatar_normal = im.Scale(Image("images/avatars/main/normal.png"), 125,125, xalign = .02, yalign = .95)
+#    image mainavatar_smile = im.Scale(Image("images/avatars/main/smile.png"), 125, 125, xalign = .02, yalign = .95)
+#    image mainavatar_cry = im.Scale(Image("images/avatars/main/cry.png"),125, 125, xalign = .02, yalign = .95)
+#    image mainavatar_normal = im.Scale(Image("images/avatars/main/normal.png"), 125,125, xalign = .02, yalign = .95)
     image boy large = im.FactorScale("images/boy.PNG", 4.0)
     image girl large = im.FactorScale("images/girl.PNG", 4.0)
     
     #Characters
     define narrator = Character('Narrator')
-    define inner_t_norm = Character("Inner Thought", show_side_image='mainavatar_normal')
-    define inner_t_cry = Character("Inner Thought", show_side_image='mainavatar_cry')
-    define inner_t_smile = Character("Inner Thought", show_side_image='mainavatar_smile')
-    define e = Character('Eileen', color="#c8ffc8", ctc="nextButton")
-    define mainCharacter = Character("[name]", color="#c8ffc8", window_left_padding=160, show_side_image=Image("images/main_character_boy_head.PNG", xalign=0.0,yalign=.85))
+    #define e = Character('Eileen', color="#c8ffc8", ctc="nextButton")
+    #define mainCharacter = Character("[name]", color="#c8ffc8", window_left_padding=160, show_side_image=Image("images/main_character_boy_head.PNG", xalign=0.0,yalign=.85))
     
    
 jump begin_script

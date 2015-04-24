@@ -1,6 +1,7 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 While running game code:
 <<<<<<< HEAD
   File "game/main_avatar_images.rpy", line 12, in script
@@ -23,10 +24,19 @@ Compiling ATL code at game/main_avatar_images.rpy:26
     c_male_blinking '...ow...'
 IndexError: list index out of range
 >>>>>>> 6554b2d17fb63b56eaf015db6880066997ce2d84
+=======
+While running game code:
+  File "game/script.rpy", line 29, in script call
+    call intro
+  File "game/intro_scene.rpy", line 24, in script
+    mainCharacter "Testing..."
+Exception: Sayer 'mainCharacter' is not defined.
+>>>>>>> Alvin's scene done. Just need to fix sentences
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   File "game/main_avatar_images.rpy", line 12, in script
@@ -111,6 +121,17 @@ Exception: Switch could not choose a displayable.
   File "<string>", line 1, in <module>
 IndexError: list index out of range
 >>>>>>> 6554b2d17fb63b56eaf015db6880066997ce2d84
+=======
+  File "game/script.rpy", line 29, in script call
+    call intro
+  File "game/intro_scene.rpy", line 24, in script
+    mainCharacter "Testing..."
+  File "C:\Users\Alvin\Downloads\renpy-6.99.1-sdk\renpy\ast.py", line 573, in execute
+    who = eval_who(self.who, self.who_fast)
+  File "C:\Users\Alvin\Downloads\renpy-6.99.1-sdk\renpy\ast.py", line 491, in eval_who
+    raise Exception("Sayer '%s' is not defined." % who.encode("utf-8"))
+Exception: Sayer 'mainCharacter' is not defined.
+>>>>>>> Alvin's scene done. Just need to fix sentences
 
 Darwin-14.1.0-x86_64-i386-64bit
 Ren'Py 6.99.1.329

@@ -2,22 +2,8 @@
 errors listed below, and try again.
 
 
-<<<<<<< HEAD
-File "game/intro_scene.rpy", line 5: end of line expected.
-    show coach_blink_norm with dissolve at center
-                                        ^
-=======
-File "game/script.rpy", line 32: expected statement.
-    <<<<<<< HEAD
-                ^
-
-File "game/script.rpy", line 36: expected statement.
-    =======
-          ^
-
-File "game/script.rpy", line 41: expected statement.
-    >>>>>>> 6554b2d17fb63b56eaf015db6880066997ce2d84
-                                                    ^
->>>>>>> e044e72a0cc7ca41205ec43d1faa79c9cd1271dc
+File "game/main_avatar_images.rpy", line 192: is not terminated with a newline. (Check strings and parenthesis.)
+(Perhaps you left out a ' at the end of the first line.)
+    >>>>>>> Alvin's scene done. Just need to fix sentences
 
 Ren'Py Version: Ren'Py 6.99.1.329

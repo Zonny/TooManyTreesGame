@@ -19,11 +19,13 @@ label help:
         c_oneal_crying '...ow...'
         menu:
             'Looks like he needs help!':
-                '*you help oneal up*'
 
+                narrator_correct '*you help oneal up*'
+                narrator_correct 'Good job!'
                 jump happy
             'Ignore':
-                'He really needs help'
+                narrator_incorrect 'He really needs help!'
+                narrator_incorrect "Choose again."
                 jump help
                 
         return 

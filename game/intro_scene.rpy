@@ -28,7 +28,7 @@ label intro:
                 name = "Kyle"
         $gender = 'male'
         "{cps=20}Hello, [name]!{/cps}"
-        mainCharacter "Testing..."
+        #mainCharacter "Testing..."
         jump choice1_done
         
     label choice1_girl:
@@ -39,4 +39,8 @@ label intro:
         jump choice1_done
         
     label choice1_done:
+        define c_main_blinking = Character('[name]', window_left_padding = 160, show_side_image=ConditionSwitch("gender == 'male'", 'male_blinking', "gender=='female'", 'female_blinking'), xalign = 0, yalign = 1.0)
+        define c_main_smiling = Character('[name]', window_left_padding = 160, show_side_image=ConditionSwitch("gender == 'male'", 'male_smiling', "gender=='female'", 'female_smiling'), xalign = 0, yalign = 1.0)
+        define c_main_crying = Character('[name]', window_left_padding = 160, show_side_image=ConditionSwitch("gender == 'male'", 'male_crying', "gender=='female'", 'female_crying'), xalign = 0, yalign = 1.0)
+
         return

@@ -207,10 +207,10 @@ init -1 python hide:
     ## Transitions.
 
     ## Used when entering the game menu from the game.
-    config.enter_transition = dissolve
+    config.enter_transition = Dissolve(.5)
 
     ## Used when exiting the game menu to the game.
-    config.exit_transition = dissolve
+    config.exit_transition = Dissolve(.5)
 
     ## Used between screens of the game menu.
     config.intra_transition = Dissolve(.5)

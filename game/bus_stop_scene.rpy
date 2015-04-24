@@ -182,8 +182,23 @@ init:
     image bs_main_standing_smile = ConditionSwitch("gender == 'male'", 'bs_mainM_standing_smile',
                                             "gender == 'female'", 'bs_mainF_standing_smile')
 
+
+    
+#    define c_main_crying = ConditionSwitch("gender == 'male'", "c_male_crying",
+#                                        "gender == 'female'", "c_female_crying")
+    
+#    define c_main_blinking = ConditionSwitch("gender == 'male'", c_male_blinking,
+#                                        "gender == 'female'", c_female_blinking)
+#    define c_main_smiling = ConditionSwitch("gender == 'male'", c_male_smiling,
+#                                        "gender == 'female'", c_female_smiling)
 label bus_stop_scene:
-    show bg_bus_stop_scene
+#    python:
+#        if "gender == 'male'":
+#            c_main_blinking = Character.c_male_blinking
+#        else:
+#            c_main_blinking = Character.c_female_blinking
+        
+    show bg_bus_stop_scene with fade
     show bs_estella_sitting_norm:
         xalign .32 yalign .60
 
@@ -200,9 +215,11 @@ label bus_stop_scene:
         linear 6 xalign .6
         "bs_main_standing_norm"
     
-    "You and Oneal are walking towards the bus stop."
+    "[name] and Oneal are walking towards the bus stop."
     $renpy.pause(6, hard=True)
-    "Both: Hi!"
+    
+    c_main_smiling "Hi!"
+    c_oneal_smiling "Hi!"
     label bs_hi_estella:
         show bs_oneal_standing_smile:
             xalign .5 yalign .6
@@ -213,12 +230,12 @@ label bus_stop_scene:
         hide bs_oneal_walking_norm
 
     
-        "Estella: Hi!"
+        c_estella_smiling "Hi!"
         hide bs_estella_sitting_norm
         show bs_estella_standing_smile:
             xalign .32 yalign .6
 
-        "Both: What is your name?"
+        c_main_blinking "What is your name?"
         show bs_main_standing_norm:
             xalign .6 yalign.615
         
@@ -227,13 +244,13 @@ label bus_stop_scene:
         
         hide bs_main_standing_smile
         hide bs_oneal_standing_smile
-        "Estella: My name is Estella!"
+        c_estella_blinking "My name is Estella!"
         show bs_estella_standing_norm:
             xalign .32 yalign .6
         
-        "You: Hi! My name is asdasd"
+        c_main_smiling "Hi! My name is [name]"
         
-        "Oneal: Hi! My name is asdfdsa"
+        c_oneal_smiling "Hi! My name is Oneal"
         show bs_oneal_standing_smile:
             xalign .5 yalign .6
         
@@ -246,22 +263,25 @@ label bus_stop_scene:
             "How are you and Oneal feeling?"
 
             "Sad":
-                "That is not what sadness looks like!"
+                narrator_incorrect "That is not what sadness looks like!"
+                narrator_incorrect "Choose again."
                 jump bs_hi_estella
             
             "Happy":
-                "Exactly! You are happy to meet new friends"
+                narrator_correct "Exactly! You are happy to meet new friends"
             
             "Angry":
-                "You should not be upset when meeting new people."
+                narrator_incorrect "You should not be upset when meeting new people."
+                narrator_incorrect "Choose again."
                 jump bs_hi_estella
             
             "Surprise":
-                "When you meet new people do not look surpised."
+                narrator_incorrect "When you meet new people do not look surpised."
+                narrator_incorrect "Choose again."
                 jump bs_hi_estella
     
     label bs_estella_join_team:
-        "Both: Would you like to join our basketball team?"
+        c_main_smiling "Would you like to join our basketball team?"
         show bs_oneal_standing_smile:
             xalign .5 yalign .6
         
@@ -271,7 +291,7 @@ label bus_stop_scene:
         hide bs_main_standing_norm
         hide bs_oneal_standing_norm
         
-        "Estella: YEA!!! I would love to join!"
+        c_estella_smiling "YEAH!!! I would love to join!"
         show bs_estella_standing_smile:
             xalign .32 yalign .6
 
@@ -281,21 +301,24 @@ label bus_stop_scene:
             "How are you feeling now that you have made a new team member?"
 
             "Sad":
-                "You should not be sad when you have made a new friend and teammate!"
+                narrator_incorrect "You should not be sad when you have made a new friend and teammate!"
+                narrator_incorrect "Choose again."
                 jump bs_estella_join_team
             
             "Happy":
-                "Exactly! You are happy to meet new friends and a new member for the basketball team."
+                narrator_correct "Exactly! You are happy to meet new friends and a new member for the basketball team."
             
             "Angry":
-                "You should not be upset when you meet new people."
+                narrator_incorrect "You should not be upset when you meet new people."
+                narrator_incorrect "Choose again."
                 jump bs_estella_join_team
             
             "Surprise":
-                "When you meet new people do not seem surpised."
+                narrator_incorrect "When you meet new people do not seem surpised."
+                narrator_incorrect "Choose again."
                 jump bs_estella_join_team
 
-    "Estella: Looks like the bus is coming."
+    c_estella_blinking "Looks like the bus is coming."
     label bus_animation:
         show bs_school_bus_moving:
             xalign 1.5 yalign .57
@@ -320,10 +343,7 @@ label bus_stop_scene:
         $renpy.pause(2, hard = True)
         
         hide bs_main_walking_norm
-
-    
-    "Next Scene"
-
+        $renpy.pause(4, hard=True)
 
 
     return

@@ -164,14 +164,14 @@ init -996:
         repeat
     
     
-    #male main character 
-    define c_male_blinking = Character('You',window_left_padding = 160, show_side_image = 'male_blinking', xalign = 0.0, yalign =1.0)
-    define c_male_crying = Character('You',window_left_padding = 160, show_side_image = 'male_crying', xalign = 0.0, yalign =1.0)
-    define c_male_smiling = Character('You',window_left_padding = 160, show_side_image = 'male_smiling', xalign = 0.0, yalign =1.0)
-    #female main character
-    define c_female_blinking = Character('You',window_left_padding = 160, show_side_image = 'female_blinking', xalign = 0.0, yalign =1.0)
-    define c_female_crying = Character('You',window_left_padding = 160, show_side_image = 'female_crying', xalign = 0.0, yalign =1.0)
-    define c_female_smiling = Character('You',window_left_padding = 160, show_side_image = 'female_smiling', xalign = 0.0, yalign =1.0)
+#    #male main character 
+#    define c_male_blinking = Character('You',window_left_padding = 160, show_side_image = 'male_blinking', xalign = 0.0, yalign =1.0)
+#    define c_male_crying = Character('You',window_left_padding = 160, show_side_image = 'male_crying', xalign = 0.0, yalign =1.0)
+#    define c_male_smiling = Character('You',window_left_padding = 160, show_side_image = 'male_smiling', xalign = 0.0, yalign =1.0)
+#    #female main character
+#    define c_female_blinking = Character('You',window_left_padding = 160, show_side_image = 'female_blinking', xalign = 0.0, yalign =1.0)
+#    define c_female_crying = Character('You',window_left_padding = 160, show_side_image = 'female_crying', xalign = 0.0, yalign =1.0)
+#    define c_female_smiling = Character('You',window_left_padding = 160, show_side_image = 'female_smiling', xalign = 0.0, yalign =1.0)
     #estella
     define c_estella_bewildered = Character('Estella', window_left_padding = 160, show_side_image = 'estella_bewildered', xalign =0.0, yalign= 1.0)
     define c_estella_blinking = Character('Estella', window_left_padding = 160, show_side_image = 'estella_blinking', xalign =0.0, yalign= 1.0)
@@ -181,5 +181,8 @@ init -996:
     define c_oneal_crying = Character('Oneal',window_left_padding=160, show_side_image= 'oneal_crying', xalign = 0.0, yalign = 1.0)
     define c_oneal_smiling = Character('Oneal', window_left_padding = 160, show_side_image = 'oneal_smiling',xalign = 0.0, yalign =1.0)
     define c_oneal_blink = Character('Oneal',window_left_padding=160, show_side_image= 'oneal_blinking', xalign = 0.0, yalign = 1.0)
-    
-        
+
+    #Narrator Colors
+    define narrator_incorrect = Character("Narrator", what_color = "#FF0033")
+    define narrator_correct = Character("Narrator", what_color = "#99FF00")
+
