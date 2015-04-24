@@ -27,9 +27,9 @@ init -999 python:
 
 label start:
     call intro
-    call wake_up_scene
     call dream_scene
-    #call neighbor_scene
+    call wake_up_scene
+    call neighbor_scene
     call bus_stop_scene
     call school_scene
     return
