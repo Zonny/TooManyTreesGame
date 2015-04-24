@@ -33,6 +33,15 @@ init -998:
        oneal_stand = dir_filenames('oneal_standing')
        oneal_jump = dir_filenames('oneal_jumping')
        school_bus = dir_filenames('objects/school_bus')
+       coach_blink = FactorScaleAll(dir_filenames('coach_blink_norm'), 4.0)
+
+    image coach_blink_norm:
+        coach_blink[0]  
+        pause .35
+        coach_blink[1]
+        pause .35
+        coach_blink[2]
+        pause .5 
         
     image male_char_standing:
         xalign .5 yalign .28

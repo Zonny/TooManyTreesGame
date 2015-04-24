@@ -2,8 +2,8 @@
 errors listed below, and try again.
 
 
-File "game/bus_stop_scene.rpy", line 253: expected statement.
-    block:
-         ^
+File "game/intro_scene.rpy", line 5: end of line expected.
+    show coach_blink_norm with dissolve at center
+                                        ^
 
 Ren'Py Version: Ren'Py 6.99.1.329

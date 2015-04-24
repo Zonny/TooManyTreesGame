@@ -1,6 +1,13 @@
 
 label intro:    
     scene black with dissolve
+
+    show coach_blink_norm at truecenter with dissolve
+        
+    'Input Coach Text Here'
+
+    hide coach_blink_norm
+
     show boy large with dissolve:
         xpos 0.2 ypos 0.15
     show girl large with dissolve:
