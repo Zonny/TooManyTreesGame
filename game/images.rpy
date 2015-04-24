@@ -12,6 +12,13 @@ init -998:
     image bg_basketball = im.Scale('images/backgrounds/basketball.PNG', width = 550, height= 250, yalign=0.2, xalign = .5)
     #image bg_dream_thoughtcloud = im.FactorScale('images/backgrounds/dream_thoughtcloud.PNG', 1.5)
     #Returns a list of string names in a directory with path+nameoffile
+
+        #neighbor images
+    image bg_neighbor = im.FactorScale('images/backgrounds/3d-cg-for-visual-novels.jpg',1.55)
+    image oneal_fallen = im.FactorScale('images/BannedStory_SpriteSheet_oneal_body/cry/frame 0/proneStab_0.png',4.0)
+    image oneal_backpack = im.FactorScale('images/BannedStory_greenpack.png', 4.0)
+    image oneal_smile = im.FactorScale('images/BannedStory_SpriteSheet_oneal_body/smile/frame 0/alert_0.png',3.7)
+
     python:
        male_player_stand = dir_filenames('male_player_standing')
        male_player_jump = dir_filenames('male_player_jumping')
