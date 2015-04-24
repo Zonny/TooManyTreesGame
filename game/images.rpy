@@ -1,5 +1,5 @@
 #Animations for all scenes
-<<<<<<< HEAD
+
 init -999 python:
     import os
    
@@ -15,8 +15,6 @@ init -999 python:
             
         return result
         
-=======
->>>>>>> 62ecce02d7d32337a02cce827fc0ed2ddc37d36e
 
         
 init -998:
@@ -28,17 +26,17 @@ init -998:
     image bg genderChoice = Image("images/startMenuBG.PNG")
     image bg_dream_thoughtcloud = im.Scale('images/backgrounds/dream_thoughtcloud.PNG',width = 800, height= 550, yalign=0.0)
     image bg_basketball = im.Scale('images/backgrounds/basketball.PNG', width = 550, height= 250, yalign=0.2, xalign = .5)
-<<<<<<< HEAD
+
     #neighbor images
-    image bg_neighbor = im.Scale('images/backgrounds/3d-cg-for-visual-novels.jpg',width= 800, height =550, yalign= 0.0)
+    image bg_neighbor = im.FactorScale('images/backgrounds/3d-cg-for-visual-novels.jpg',1.55)
     image oneal_fallen = im.FactorScale('images/BannedStory_SpriteSheet_oneal_body/cry/frame 0/proneStab_0.png',4.0)
     image oneal_backpack = im.FactorScale('images/BannedStory_greenpack.png', 4.0)
     image oneal_smile = im.FactorScale('images/BannedStory_SpriteSheet_oneal_body/smile/frame 0/alert_0.png',3.7)
 
     #
-=======
+
     #image bg_dream_thoughtcloud = im.FactorScale('images/backgrounds/dream_thoughtcloud.PNG', 1.5)
->>>>>>> 62ecce02d7d32337a02cce827fc0ed2ddc37d36e
+
     #Returns a list of string names in a directory with path+nameoffile
     python:
        male_player_stand = dir_filenames('male_player_standing')
