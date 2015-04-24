@@ -172,13 +172,14 @@ init:
         bs_oneal_walk_smile[3]
         pause .25
         repeat
-image bs_main_walking_norm = ConditionSwitch("gender == 'male'", 'bs_mainM_walking_norm',
+        
+    image bs_main_walking_norm = ConditionSwitch("gender == 'male'", 'bs_mainM_walking_norm',
                                             "gender == 'female'", 'bs_mainF_walking_norm')
 
-image bs_main_standing_norm = ConditionSwitch("gender == 'male'", 'bs_mainM_standing_norm',
+    image bs_main_standing_norm = ConditionSwitch("gender == 'male'", 'bs_mainM_standing_norm',
                                             "gender == 'female'", 'bs_mainF_standing_norm')
 
-image bs_main_standing_smile = ConditionSwitch("gender == 'male'", 'bs_mainM_standing_smile',
+    image bs_main_standing_smile = ConditionSwitch("gender == 'male'", 'bs_mainM_standing_smile',
                                             "gender == 'female'", 'bs_mainF_standing_smile')
 
 label bus_stop_scene:
@@ -191,61 +192,138 @@ label bus_stop_scene:
     
     show bs_oneal_walking_norm:
         xalign 1.2 yalign .60
-        linear 8 xalign .5
+        linear 6 xalign .5
         "bs_oneal_standing_norm"
     
     show bs_main_walking_norm:
         xalign 1.3 yalign .615
-        linear 8 xalign .6
+        linear 6 xalign .6
         "bs_main_standing_norm"
     
     "You and Oneal are walking towards the bus stop."
-    
+    $renpy.pause(6, hard=True)
     "Both: Hi!"
-    show bs_oneal_standing_smile:
-        xalign .5 yalign .6
-    
-    show bs_main_standing_smile:
-        xalign .6 yalign .615
-    hide bs_main_walking_norm
-    hide bs_oneal_walking_norm
-    
-    "Estella: Hi!"
-    hide bs_estella_sitting_norm
-    show bs_estella_standing_smile:
-        xalign .32 yalign .6
-
-    "Both: What is your name?"
-    show bs_main_standing_norm:
-        xalign .6 yalign.615
-    
-    show bs_oneal_standing_norm:
-        xalign .5  yalign .6
-    
-    hide bs_main_standing_smile
-    hide bs_oneal_standing_smile
-    "Estella: My name is Estella!"
-    show bs_estella_standing_norm:
-        xalign .32 yalign .6
-    
-    "You: Hi! My name is asdasd"
-    
-    "Oneal: Hi! My name is asdfdsa"
-    
-    "Both: Would you like to join our basketball team?"
-    show bs_oneal_standing_smile:
-        xalign .5 yalign .6
-    
-    show bs_main_standing_smile:
-        xalign .6 yalign .615
-    
-    hide bs_main_standing_norm
-    hide bs_oneal_standing_norm
-    "Testing"
-    show bs_school_bus_moving:
-        xalign 1 yalign .57
-        easein 5 xalign .3
+    label bs_hi_estella:
+        show bs_oneal_standing_smile:
+            xalign .5 yalign .6
         
-        bs_vip_bus[0]
+        show bs_main_standing_smile:
+            xalign .6 yalign .615
+        hide bs_main_walking_norm
+        hide bs_oneal_walking_norm
+
     
+        "Estella: Hi!"
+        hide bs_estella_sitting_norm
+        show bs_estella_standing_smile:
+            xalign .32 yalign .6
+
+        "Both: What is your name?"
+        show bs_main_standing_norm:
+            xalign .6 yalign.615
+        
+        show bs_oneal_standing_norm:
+            xalign .5  yalign .6
+        
+        hide bs_main_standing_smile
+        hide bs_oneal_standing_smile
+        "Estella: My name is Estella!"
+        show bs_estella_standing_norm:
+            xalign .32 yalign .6
+        
+        "You: Hi! My name is asdasd"
+        
+        "Oneal: Hi! My name is asdfdsa"
+        show bs_oneal_standing_smile:
+            xalign .5 yalign .6
+        
+        show bs_main_standing_smile:
+            xalign .6 yalign .615    
+        
+        hide bs_main_standing_norm
+        hide bs_oneal_standing_norm
+        menu:
+            "How are you and Oneal feeling?"
+
+            "Sad":
+                "That is not what sadness looks like!"
+                jump bs_hi_estella
+            
+            "Happy":
+                "Exactly! You are happy to meet new friends"
+            
+            "Angry":
+                "You should not be upset when meeting new people."
+                jump bs_hi_estella
+            
+            "Surprise":
+                "When you meet new people do not look surpised."
+                jump bs_hi_estella
+    
+    label bs_estella_join_team:
+        "Both: Would you like to join our basketball team?"
+        show bs_oneal_standing_smile:
+            xalign .5 yalign .6
+        
+        show bs_main_standing_smile:
+            xalign .6 yalign .615
+        
+        hide bs_main_standing_norm
+        hide bs_oneal_standing_norm
+        
+        "Estella: YEA!!! I would love to join!"
+        show bs_estella_standing_smile:
+            xalign .32 yalign .6
+
+        hide bs_estella_standing_norm
+        
+        menu:
+            "How are you feeling now that you have made a new team member?"
+
+            "Sad":
+                "You should not be sad when you have made a new friend and teammate!"
+                jump bs_estella_join_team
+            
+            "Happy":
+                "Exactly! You are happy to meet new friends and a new member for the basketball team."
+            
+            "Angry":
+                "You should not be upset when you meet new people."
+                jump bs_estella_join_team
+            
+            "Surprise":
+                "When you meet new people do not seem surpised."
+                jump bs_estella_join_team
+
+    "Estella: Looks like the bus is coming."
+    label bus_animation:
+        show bs_school_bus_moving:
+            xalign 1.5 yalign .57
+            easein 5 xalign .3
+        
+            bs_vip_bus[0]
+        
+            pause 4
+            'bs_school_bus_moving'
+            easeout 5 xalign -.7
+
+        $renpy.pause(5, hard=True)
+        hide bs_estella_standing_smile
+        $renpy.pause(1, hard=True)     
+        hide bs_oneal_standing_smile
+        
+        hide bs_main_standing_smile
+        show bs_main_walking_norm:
+            xalign .6 yalign .615
+            linear 2 xalign .44
+            "bs_main_standing_norm"
+        $renpy.pause(2, hard = True)
+        
+        hide bs_main_walking_norm
+
+    
+    "Next Scene"
+
+
+
     return

@@ -1,51 +1,34 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
-Compiling ATL code at game/bus_stop_scene.rpy:136
+While running game code:
   File "game/script.rpy", line 31, in script call
     call bus_stop_scene
-  File "game/bus_stop_scene.rpy", line 191, in script
-    show bs_oneal_standing_smile:
-IndexError: list index out of range
+  File "game/bus_stop_scene.rpy", line 203, in script
+    pause(8, hard=True)
+  File "renpy/common/000statements.rpy", line 360, in execute_pause
+    delay = eval(p["delay"])
+SyntaxError: invalid syntax (game/bus_stop_scene.rpy, line 203)
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
   File "game/script.rpy", line 31, in script call
     call bus_stop_scene
-  File "game/bus_stop_scene.rpy", line 191, in script
-    show bs_oneal_standing_smile:
-  File "C:\Users\Alvin\Downloads\renpy-6.99.1-sdk\renpy\ast.py", line 1040, in execute
-    show_imspec(self.imspec, atl=getattr(self, "atl", None))
-  File "C:\Users\Alvin\Downloads\renpy-6.99.1-sdk\renpy\ast.py", line 1012, in show_imspec
-    atl=atl)
-  File "C:\Users\Alvin\Downloads\renpy-6.99.1-sdk\renpy\exports.py", line 544, in show
-    sls.add(layer, img, key, zorder, behind, at_list=at_list, name=name, atl=atl, default_transform=renpy.config.default_transform, transient=transient)
-  File "C:\Users\Alvin\Downloads\renpy-6.99.1-sdk\renpy\display\core.py", line 847, in add
-    thing._show()
-  File "C:\Users\Alvin\Downloads\renpy-6.99.1-sdk\renpy\display\motion.py", line 929, in _show
-    super(ATLTransform, self)._show()
-  File "C:\Users\Alvin\Downloads\renpy-6.99.1-sdk\renpy\display\motion.py", line 913, in _show
-    self.update_state()
-  File "C:\Users\Alvin\Downloads\renpy-6.99.1-sdk\renpy\display\motion.py", line 787, in update_state
-    pos = child.get_placement()
-  File "C:\Users\Alvin\Downloads\renpy-6.99.1-sdk\renpy\display\image.py", line 217, in get_placement
-    return self.target.get_placement()
-  File "C:\Users\Alvin\Downloads\renpy-6.99.1-sdk\renpy\display\motion.py", line 855, in get_placement
-    self.update_state()
-  File "C:\Users\Alvin\Downloads\renpy-6.99.1-sdk\renpy\display\motion.py", line 773, in update_state
-    fr = self.function(self, self.st, self.at)
-  File "C:\Users\Alvin\Downloads\renpy-6.99.1-sdk\renpy\atl.py", line 466, in execute
-    block = self.compile()
-  File "C:\Users\Alvin\Downloads\renpy-6.99.1-sdk\renpy\atl.py", line 434, in compile
-    block = self.atl.compile(self.context)
-  File "C:\Users\Alvin\Downloads\renpy-6.99.1-sdk\renpy\atl.py", line 607, in compile
-    statements = [ i.compile(ctx) for i in self.statements ]
-  File "C:\Users\Alvin\Downloads\renpy-6.99.1-sdk\renpy\atl.py", line 810, in compile
-    child = ctx.eval(expr)
-  File "C:\Users\Alvin\Downloads\renpy-6.99.1-sdk\renpy\atl.py", line 212, in eval
-    return eval(expr, renpy.store.__dict__, self.context) #@UndefinedVariable
-  File "<string>", line 1, in <module>
-IndexError: list index out of range
+  File "game/bus_stop_scene.rpy", line 203, in script
+    pause(8, hard=True)
+  File "C:\Users\Alvin\Downloads\renpy-6.99.1-sdk\renpy\ast.py", line 1641, in execute
+    self.call("execute")
+  File "C:\Users\Alvin\Downloads\renpy-6.99.1-sdk\renpy\ast.py", line 1659, in call
+    renpy.statements.call(method, parsed, *args, **kwargs)
+  File "C:\Users\Alvin\Downloads\renpy-6.99.1-sdk\renpy\statements.py", line 144, in call
+    return method(parsed, *args, **kwargs)
+  File "renpy/common/000statements.rpy", line 360, in execute_pause
+    delay = eval(p["delay"])
+  File "C:\Users\Alvin\Downloads\renpy-6.99.1-sdk\renpy\python.py", line 1466, in py_eval
+    return eval(py_compile(source, 'eval'), globals, locals)
+  File "C:\Users\Alvin\Downloads\renpy-6.99.1-sdk\renpy\python.py", line 512, in py_compile
+    raise e
+SyntaxError: invalid syntax (game/bus_stop_scene.rpy, line 203)
 
 Windows-8-6.2.9200
 Ren'Py 6.99.1.329
